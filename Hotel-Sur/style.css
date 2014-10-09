@@ -17,7 +17,7 @@ h4 {
 
 #main h1 {
     font-size: 50px;
-    line-height: 1.6em
+    line-height: 1.2em
 }
 #main h2 {
     font-size: 40px;
@@ -31,7 +31,10 @@ h2, h3, h4 {
     line-height:1.4;
 }
 
-a {}
+#main a.simple-link {
+    display: block;
+    text-decoration: underline;
+}
 a:hover {text-decoration:underline;}
 
 body {
@@ -45,9 +48,12 @@ body {
     box-sizing: border-box;
     padding:10px 0;
 }
+#header .content .span2 {
+    padding-top: 10px;
+}
 
 #main {}
-#main p, #main li {
+#main p, #main li, .simple-link {
     font-size: 17px;
     line-height:1.6;
 }
@@ -62,7 +68,7 @@ body {
 /* Cuando en bootstrap el contenido es container, posicion relativa para los elementos en absoluta */
 #header .content, #main .content, #footer .content {position: relative;}
 
-[class*="span"], .info-room .contSlideshow {
+[class*="span"], .info-room .contSlideshow, .img-collage img {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -74,6 +80,7 @@ body {
 /*------------------------------------ LOGO ------------------------------------*/
 #logo {
     margin-bottom: -80px;
+    padding-top: 0!important;
     position: relative;
     z-index: 10;
 }
@@ -81,13 +88,24 @@ body {
 
 
 /*--------------------------------- QTRANSLATE ---------------------------------*/
-.widget_qtranslate {text-align: right;}
+.widget_qtranslate {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    text-align: right;
+}
 .widget_qtranslate h3 {}
 .widget_qtranslate ul {}
-.widget_qtranslate ul li {}
-.widget_qtranslate ul li:first-child {}
+.widget_qtranslate ul li {
+    border-left: 1px solid #A28B69;
+    margin-left: 4px;
+    padding-left: 4px;
+}
+.widget_qtranslate ul li:first-child {border: 0}
 .widget_qtranslate ul li.last-child {}
-.widget_qtranslate ul li a {}
+.widget_qtranslate ul li a {
+    color: #A28B69;
+}
 .widget_qtranslate ul li a:hover {}
 .widget_qtranslate ul li.active a {}
 .widget_qtranslate ul li.active a,
@@ -100,7 +118,7 @@ body {
 .widget_qtranslate select {width: 100px;}
 
 .widget_qtranslate ul li {display: inline-block;}
-.widget_qtranslate ul li.active {display: none;}
+.widget_qtranslate ul li.active a {color: #6E6E6E}
 
 /*------------------------------------------------------------------------------*/
 
@@ -108,6 +126,7 @@ body {
 /*-------------------------------- MENU-NAV-WEB --------------------------------*/
 ul#menu_web {
     margin-top: 30px;
+    padding-top: 10px;
 }
 ul#menu_web li {}
 ul#menu_web li a {
@@ -159,7 +178,9 @@ ul#menu_footer li a {
 }
 
 /*MENU LEGAL*/
-ul#menu_legal {}
+ul#menu_legal {
+    margin-top: 12px;
+}
 ul#menu_legal li {
     display: inline-block;
     padding:0 5px;
@@ -457,18 +478,27 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 
 
 /*-------------------------------  SOCIAL MEDIA --------------------------------*/
-#social-media {}
+#social-media {
+    padding-top: 6px;
+}
 #social-media h3 {}
 #social-media ul {}
-#social-media ul li {display: inline-block; text-align: left;}
+#social-media ul li {display: inline-block; text-align: left;margin-right:2px;}
 #social-media ul li:first-child {}
 #social-media ul li a {
-    /* New Social Media icons in COLOR and hover in COLOR */
-    background-image: url('../mirai/images/sprite_color.png');
-
-    /* New Social Media icons in COLOR and hover in GREY */
-    /*background-image: url('../mirai/images/sprite_grey.png');*/
+    background-image: url('/files/social-icons.png');
+    opacity:0.8;
 }
+#social-media ul li a:hover {
+    opacity:1;
+}
+#social-media ul li .rss_link_32 {background-position:0 0px;}
+#social-media ul li .rss_link_32:hover {background-position:0 0;}
+#social-media ul li .facebook_link_32 {background-position:-47px 0;}
+#social-media ul li .facebook_link_32:hover {background-position:-47px 0;}
+#social-media ul li .googleplus_link_32 {background-position:-94px 0;}
+#social-media ul li .googleplus_link_32:hover {background-position:-94px 0;}
+
 
 /* Social Media Extra 1 */
 #social-media ul li .extra1_link {background-image: url(); background-position:0 0;}
@@ -881,13 +911,25 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 .pad0-10 {
     padding:0 10%;
 }
+.mb10 {margin-bottom: 16px;}
 .left-col {
     padding-right: 20px;
 }
 .right-col {
     padding-left: 20px; 
 }
-
+.left-col-m {
+    padding-right: 10px;
+}
+.right-col-m {
+    padding-left: 10px; 
+}
+#intro-content {
+    background-color: #ddbe7d;
+    background-size: 100% auto ;
+    background-repeat: no-repeat;
+    color: #3B3B3B;
+}
 
 
 
@@ -897,6 +939,8 @@ div.hssurveys_full {padding: 2%; width: 96%;}
     color: #B0955F;
 }
 .button {
+    background: transparent;
+    background: rgba(0,0,0,0);
     color: #FFF;
     border: 2px solid #FFF;
     border-radius: 2px;
@@ -911,6 +955,7 @@ div.hssurveys_full {padding: 2%; width: 96%;}
     z-index:1;
 }
 .img-button .button {
+    background: transparent;
     background: rgba(0,0,0,0);
     position: absolute;
     z-index:2;
@@ -947,11 +992,6 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 /*ROOMS*/
 .cat-rooms #intro-content {
     background-image: url('/files/intro-image-rooms.jpg');
-    background-color: #ddbe7d;
-    background-size: 100% auto ;
-    background-repeat: no-repeat;
-    color: #3B3B3B;
-    min-height: 440px;
 }
 .row .container {
     padding: 50px 0;    
@@ -962,14 +1002,42 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 #intro-content .container {
     padding: 40px 8%;
 }
+.servive-list {
+    margin-top:20px;
+    text-align: center;
+}
 .servive-list li {
     display: inline-block;
-    padding: 10px;    
+    padding: 10px 0;    
     vertical-align: top;
     width: 120px;
 }
+.servive-list li i {
+    display: block;
+    height:40px;
+    margin: 0 auto;
+    width: 66px;
+}
+.servive-list li.wifi i {
+    width: 42px;
+}
+.servive-list li.bath i {
+    width: 39px;
+}
+.servive-list li.tv i {
+    width: 55px;
+}
+.servive-list li.air i {
+    width: 62px;
+}
+.servive-list li.desk i {
+    width: 36px;
+}
+.servive-list li.phone i {
+    width: 37px;
+}
 
-.info-room .contSlideshow {
+.info-room .contSlideshow, .img-collage img {
     padding: 10px;
     border: 1px solid currentcolor;
     border-radius: 2px;
@@ -980,13 +1048,26 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 .info-room .contSlideshow a {
     display; block;
 }
+.info-room .button {
+    background: transparent;
+    background: rgba(0,0,0,0);
+    color: currentcolor;
+    border: 2px solid currentcolor;
+}
 
+
+
+
+/*SERVICES*/
+.cat-services #intro-content {
+    background-image: url('/files/intro-image-services.jpg');
+}
 
 
 
 
 /*backgrounds colours*/
-.dark-grey {
+.dark-grey, .light-brown {
     background: #3D3635;
     position: relative;
     display:block;
@@ -1016,6 +1097,32 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 .dark-grey * {
     color: #FFF;
 }
+
+.light-brown {
+    background-color: #ddbe7d;
+}
+.light-brown:before, .light-brown:after {
+    background: #FFF;
+    content:'';
+    display: block;
+    position: absolute;
+    top: -20px;  left: 50%;  margin-left: -20px;
+    
+    height: 40px;
+    width: 40px;
+    z-index: 20;
+    
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg) ;
+    -moz-transform: rotate(45deg) ;
+    -o-transform: rotate(45deg) ;
+    -ms-transform: rotate(45deg) ;
+}
+.light-brown:after {
+    background: #ddbe7d;
+    bottom: -20px; top: auto;
+}
+
 
 /*back to top*/
 #back-to-top {
@@ -1098,6 +1205,13 @@ div.hssurveys_full {padding: 2%; width: 96%;}
     .right-col {
         padding-left: 30px; 
     }
+    .servive-list li {
+        padding: 10px;
+    }
+    #main h1 {
+        line-height: 1.6em
+    }
+    .mb10 {margin-bottom: 30px;}
 }
 
 /* ipad portrait - landscape */
