@@ -12,52 +12,61 @@ h1 {}
 h2 {}
 h3 {}
 h4 {
-	font-size: 1em;
+    font-size: 1em;
 }
 
 #main h1 {
-	font-size: 50px;
+    font-size: 50px;
     line-height: 1.6em
 }
 #main h2 {
-	font-size: 40px;
+    font-size: 40px;
+}
+#main h3 {
+    font-size: 24px;
 }
 h2 {}
 
 h2, h3, h4 {
-	line-height:1.4;
+    line-height:1.4;
 }
 
 a {}
 a:hover {text-decoration:underline;}
 
 body {
-	font-family: 'Arvo', serif;
+    font-family: 'Arvo', serif;
 }
 
 #header {}
 #header .content {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding:10px 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding:10px 0;
 }
 
 #main {}
 #main p, #main li {
-	font-size: 17px;
-	line-height:1.6;
+    font-size: 17px;
+    line-height:1.6;
 }
 #main .content {}
 
 #footer {}
 .home #footer #menu_footer {
-	display:none;
+    display:none;
 }
 #footer .content {}
 
 /* Cuando en bootstrap el contenido es container, posicion relativa para los elementos en absoluta */
 #header .content, #main .content, #footer .content {position: relative;}
+
+[class*="span"], .info-room .contSlideshow {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 /*------------------------------------------------------------------------------*/
 
@@ -98,11 +107,11 @@ body {
 
 /*-------------------------------- MENU-NAV-WEB --------------------------------*/
 ul#menu_web {
-	margin-top: 30px;
+    margin-top: 30px;
 }
 ul#menu_web li {}
 ul#menu_web li a {
-	color: #A1A1A1;
+    color: #A1A1A1;
     font-size: 1.2em;
     text-transform: uppercase;
 }
@@ -135,16 +144,16 @@ ul#menu_web > li div[data-ajax-menu-parent] {}
 /*MENU FOOTER*/
 ul#menu_footer {
     background: #FFEFD9;
-	height: 60px;
+    height: 60px;
 }
 ul#menu_footer li {
     display: inline-block;
-	line-height: 60px;
+    line-height: 60px;
     
     padding:0 15px;
 }
 ul#menu_footer li a {
-	color: #A1A1A1;    
+    color: #A1A1A1;    
     font-size: 1.4em;
     text-transform: uppercase;
 }
@@ -156,7 +165,7 @@ ul#menu_legal li {
     padding:0 5px;
 }
 ul#menu_legal li a {
-	color: #FFF;    
+    color: #FFF;    
     font-size: 1em;
 }
 /*------------------------------------------------------------------------------*/
@@ -300,7 +309,7 @@ ul#menu_legal li a {
 }
 .engine-datepicker .ui-datepicker-calendar ._checkin-date {
     /* INHERITED:
-	opacity: 1;*/
+    opacity: 1;*/
 }
 .ui-datepicker-calendar ._checkin-date {}
 .ui-datepicker-calendar ._checkin-date span,
@@ -507,7 +516,28 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 .on-page-slideshow .slideshow {}
 .on-page-slideshow .slideshow .contSlideshow .txtslider {}
 .on-page-slideshow > div, .on-page-slideshow > div .contSlideshow img {}
-.on-page-slideshow .prev, .on-page-slideshow .next {}
+.on-page-slideshow .prev, .on-page-slideshow .next {
+    background-image: url('/files/slideshow-arrows.png');
+    background-position: 0 -54px;
+    display: block;
+    text-indent:-9999px;
+    left: 20px;
+    
+    height: 46px;
+    width: 30px;
+    z-index: 20;
+}
+.on-page-slideshow .next {
+    background-position: -78px -54px;
+    right: 20px;
+    left:auto;
+}
+.dark-grey .on-page-slideshow .prev {
+    background-position: 0 0;
+}
+.dark-grey .on-page-slideshow .next {
+    background-position: -78px 0;
+}
 .on-page-slideshow .prev:hover, .on-page-slideshow .next:hover {}
 .on-page-slideshow .prev {}
 .on-page-slideshow .prev:hover {}
@@ -551,8 +581,8 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 .bookingstep1 #mirai_be0 input,
 .bookingstep1 #mirai_be0 span,
 .bookingstep1 #mirai_be0 select {
-	font-family: Arial;
-}	
+    font-family: Arial;
+}   
 .bookingstep1 #header {}
 .bookingstep1 #header .content {
     margin: 0 auto;
@@ -769,7 +799,7 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 .post .entry img {
     box-shadow: 0 0 10px #333333;
     -webkit-box-shadow: 0 0 10px #333333;
-	border: 5px solid #FFF;
+    border: 5px solid #FFF;
 }
 .post .entry img.aligncenter {}
 .post .entry img.alignleft {}
@@ -798,6 +828,7 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 
 
 /*--------------------------------- SITE STYLES --------------------------------*/
+/*GLOBAL*/
 .text-right {text-align: right;}
 .text-left {text-align: left;}
 .text-center {text-align: center;}
@@ -808,31 +839,65 @@ div.hssurveys_full {padding: 2%; width: 96%;}
     border-radius: 2px;
     color: #FFF;
     font-size: 1.5em;
-	margin-top: 20px;
+    margin-top: 20px;
     padding: 10px 16px;
     text-shadow: none;
     width: auto;
 }
 
 .flex-content {
-	display: flex;
+    display: flex;
 }
 .vertical-center {
-	margin:auto;
+    margin:auto;
 }
 #colophon {
-	background: #3D3635;
-	color: #FFF;
+    background: #3D3635;
+    color: #FFF;
     padding:40px 0;
 }
 
+.info-list li {
+    display:inline-block;
+    position: relative;
+    padding-right: 3%;
+    width:44%;
+}
+.info-list li:before {
+    display:inline-block;
+    content:'·';
+    margin-right: 5px;
+}
+.floral img {
+    display: block;
+    margin: -10px auto 10px;
+    width: 40%;
+}
+.not-home .floral img {
+    display: block;
+    margin: -10px auto 10px;
+    width: 20%;
+}
+.pad0-10 {
+    padding:0 10%;
+}
+.left-col {
+    padding-right: 20px;
+}
+.right-col {
+    padding-left: 20px; 
+}
+
+
+
+
 /*HOME*/
 .home .row {
-	background: #FFEFD9;
+    background: #FFEFD9;
     color: #B0955F;
 }
 .button {
-	color: #FFF;
+    color: #FFF;
     border: 2px solid #FFF;
     border-radius: 2px;
     display: inline-block;
@@ -842,12 +907,12 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 .img-button {
     position:relative;
     /*overflow: hidden;
-	height: 340px;*/
+    height: 340px;*/
     z-index:1;
 }
 .img-button .button {
     background: rgba(0,0,0,0);
-	position: absolute;
+    position: absolute;
     z-index:2;
 }
 .img-button:hover .button  {
@@ -872,47 +937,104 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 }
 /*.home_img {
     height:100%;
-	max-width:none;
+    max-width:none;
     width:auto;
 }*/
 
+
+
+
 /*ROOMS*/
 .cat-rooms #intro-content {
-	background-image: url('/files/intro-image-rooms.jpg');
-	background-color: #ddbe7d;
-	background-size: 100% auto ;
-	background-repeat: no-repeat;
+    background-image: url('/files/intro-image-rooms.jpg');
+    background-color: #ddbe7d;
+    background-size: 100% auto ;
+    background-repeat: no-repeat;
     color: #3B3B3B;
-	min-height: 440px;
+    min-height: 440px;
 }
 .row .container {
-    padding: 40px 8%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+    padding: 50px 0;    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-.servive-room-list li {
+#intro-content .container {
+    padding: 40px 8%;
+}
+.servive-list li {
     display: inline-block;
     padding: 10px;    
     vertical-align: top;
     width: 120px;
 }
 
-
-.floral img {
-    display: block;
-    margin: -10px auto 10px;
-    width: 40%;
+.info-room .contSlideshow {
+    padding: 10px;
+    border: 1px solid currentcolor;
+    border-radius: 2px;
 }
-.not-home .floral img {
-    display: block;
-    margin: -10px auto 10px;
-    width: 20%;
+.photo-room .on-page-slideshow {
+    height: 355px!important;
 }
-.pad0-10 {
-	padding:0 10%;
+.info-room .contSlideshow a {
+    display; block;
 }
 
+
+
+
+
+/*backgrounds colours*/
+.dark-grey {
+    background: #3D3635;
+    position: relative;
+    display:block;
+    z-index: 10;
+}
+.dark-grey:before, .dark-grey:after {
+    background: #FFF;
+    content:'';
+    display: block;
+    position: absolute;
+    top: -20px;  left: 50%;  margin-left: -20px;
+    
+    height: 40px;
+    width: 40px;
+    z-index: 20;
+    
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg) ;
+    -moz-transform: rotate(45deg) ;
+    -o-transform: rotate(45deg) ;
+    -ms-transform: rotate(45deg) ;
+}
+.dark-grey:after {
+    background: #3D3635;
+    bottom: -20px; top: auto;
+}
+.dark-grey * {
+    color: #FFF;
+}
+
+/*back to top*/
+#back-to-top {
+    width: 50px;
+    height: 35px;
+    padding-top: 15px;
+    overflow: hidden;
+    text-align: center;
+    background: #C4C9CF;
+    position: fixed;
+    right: 10px;
+    bottom: -50px;
+    z-index: 50;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+#back-to-top.show {
+    bottom: 10px;
+}
 
 /*------------------------------------------------------------------------------*/
 
@@ -930,8 +1052,8 @@ div.hssurveys_full {padding: 2%; width: 96%;}
     }
     .home .row {
         margin-bottom: -1px;
-        overflow: hidden;    	
-	}
+        overflow: hidden;       
+    }
     .floral img {
         display: block;
         /*margin: 20px auto;*/
@@ -963,6 +1085,18 @@ div.hssurveys_full {padding: 2%; width: 96%;}
     }
     ul#menu_footer li a {
         font-size: 1.6em;
+    }
+    .info-room .contSlideshow a {
+        display; block;
+    }
+    .photo-room .on-page-slideshow {
+        height: 426px!important;
+    }
+    .left-col {
+        padding-right: 30px;
+    }
+    .right-col {
+        padding-left: 30px; 
     }
 }
 
