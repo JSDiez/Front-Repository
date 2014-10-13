@@ -12,26 +12,32 @@ h1 {}
 h2 {}
 h3 {}
 h4 {
-    font-size: 1em;
+    font-size: 1.4em;
 }
 
+.home h4 {
+    font-size: 1em;
+}
 #main h1 {
-    font-size: 50px;
+    font-size: 45px;
     line-height: 1.2em
 }
-#main h2 {
-    font-size: 40px;
+#main h2, .offers-listing-wrapper h2 {
+    color: #474747;
+    font-size: 36px;
+    font-weight: normal;
 }
 #main h3 {
     font-size: 24px;
 }
 h2 {}
 
-h2, h3, h4 {
+h2, h3, h4, .offers-listing-wrapper h2 {
     line-height:1.4;
 }
 
 #main a.simple-link {
+    color: currentcolor;
     display: block;
     text-decoration: underline;
 }
@@ -47,6 +53,9 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding:10px 0;
+}
+#header .content .container {
+    position: relative;
 }
 #header .content .span2 {
     padding-top: 10px;
@@ -91,7 +100,7 @@ body {
 .widget_qtranslate {
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 0;
     text-align: right;
 }
 .widget_qtranslate h3 {}
@@ -141,14 +150,18 @@ ul#menu_web > li {
     padding:0 5px;
 }
 ul#menu_web > li a {}
-ul#menu_web > li:hover a,
-ul#menu_web > li a:hover {color: #474747}
 ul#menu_web > li:hover ul.sub-menu {}
 ul#menu_web > li.current-menu-item {}
 
-ul#menu_web > li a:hover, 
+ul#menu_web > li:hover a, ul#menu_footer > li:hover a,
+ul#menu_web > li a:hover,  ul#menu_footer > li a:hover,
 ul#menu_web > li.current-menu-item a,
-ul#menu_web > li.current-menu-parent a {color: #474747}
+ul#menu_web > li.current-menu-parent a,
+ul#menu_footer > li.current-menu-item a,
+ul#menu_footer > li.current-menu-parent a  {
+    color: #474747;
+    text-decoration: none;
+}
 
 ul#menu_web > li ul.sub-menu {}
 ul#menu_web > li ul.sub-menu li a {} 
@@ -202,8 +215,13 @@ ul#menu_legal li a {
 .mapa .formRuta {}
 .mapa .formRuta label {}
 .mapa .formRuta input {margin-right: 10px;}
-.mapa .formRuta input.origen {}
-.mapa .formRuta input.calculaRuta {}
+.mapa .formRuta input.origen {
+    margin-top:10px;
+    padding: 10px 4px;
+}
+.mapa .formRuta input.calculaRuta {
+    margin-top:10px!important;
+}
 .mapa .formRuta input.calculaRuta:hover {}
 .mapa .formRuta input.calculaRuta.disabled,
 .mapa .formRuta input.calculaRuta.disabled:hover {}
@@ -236,7 +254,10 @@ ul#menu_legal li a {
 /* OJO!!!!! acordaos de revisar los botones de prev/next del calendar */
 .ui-datepicker .ui-datepicker-header,
 .ui-datepicker .ui-datepicker-buttonpane button,
-.ui-datepicker td:hover a {}
+.ui-datepicker td:hover a {
+    background: #c3b59b;
+    color: #FFF;
+}
 #ui-datepicker-div {font-size: 14px !important;}
 /*------------------------------------------------------------------------------*/
 
@@ -247,15 +268,25 @@ ul#menu_legal li a {
 .engine_mashup > div {}
 .engine_mashup > div .text-before {}
 .engine_mashup > div .text-after {}
-.engine_mashup > div form {}
+.engine_mashup > div form {
+    text-align: right!important;
+    padding: 20px 0!important;
+}
 .engine_mashup > div form legend {}
 .engine_mashup > div form .control-group {}
-.engine_mashup > div form .control-group label {}
+.engine_mashup > div form .control-group label {
+    color: #A1A1A1;
+    font-size: 20px;
+    line-height: 38px;
+}
 .engine_mashup > div form .control-group label.label-code {}
 .engine_mashup > div form .control-group span.help-inline {}
 .engine_mashup > div form .control-group span.legend a {}
 .engine_mashup > div form .control-group select,
-.engine_mashup > div form .control-group input[type=text] {}
+.engine_mashup > div form .control-group input[type=text] {
+    margin-bottom: 0;
+    padding: 9px;
+}
 .engine_mashup > div form .control-group input[type=text].date {}
 .engine_mashup > div form .control-group input[type=text].code {}
 .engine_mashup > div form .button-group {}
@@ -264,10 +295,22 @@ ul#menu_legal li a {
 .engine_mashup > div form .button-group input[type="submit"],
 .mapa .formRuta input.calculaRuta, #mirai_be7 input,
 #respond .form-submit #submit,
-.wpcf7 .wpcf7-form input.wpcf7-submit {
-
+.wpcf7 .wpcf7-form input.wpcf7-submit, .offers-listing-wrapper .offer .offer-button, .engine_button, .engine-button.collapsed,
+.offers-detail-wrapper .offer-calendar-wrapper .offer-button {
+    background: #B0955F;
+    border: 0;
+    border-radius: 2px;
+    color: #FFF;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom:0;
+    padding: 10px 16px;
+    text-shadow: none;
+    width: auto;
 }
-
+.offers-listing-wrapper .offer .offer-button {
+    padding: 4px 25px 5px;
+}
 .engine_mashup > div form .button-group input[type="submit"]:hover,
 .mapa .formRuta input.calculaRuta:hover, #mirai_be7 input:hover,
 #respond .form-submit #submit:hover,
@@ -277,6 +320,9 @@ ul#menu_legal li a {
 /* ----- */
 
 /* SÓLO BOTÓN DE RESERVAR */
+#engine-submit-wrapper{
+    margin-right: 0;
+}
 .engine_mashup > div form .button-group input[type=submit] {}
 .engine_mashup > div form .button-group input[type=submit]:hover {}
 /* ----- */
@@ -448,6 +494,10 @@ html:not(.ie8) .engine_mashup.showInlineLabelsFields .filled-control-group .empt
 .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline {}
 .offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .ui-datepicker-header {}
 .offers-detail-wrapper .offer-calendar-wrapper .offer-button {}
+.offers-detail-wrapper .offer-calendar-wrapper .offer-button:disabled {
+    color:#FFF;
+    opacity: 0.7;
+}
 /*------------------------------------------------------------------------------*/
 
 
@@ -859,21 +909,12 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 
 /*--------------------------------- SITE STYLES --------------------------------*/
 /*GLOBAL*/
+p {
+    color: #996633;
+}
 .text-right {text-align: right;}
 .text-left {text-align: left;}
 .text-center {text-align: center;}
-
-.engine_button {
-    background: #B0955F;
-    border: 0;
-    border-radius: 2px;
-    color: #FFF;
-    font-size: 1.5em;
-    margin-top: 20px;
-    padding: 10px 16px;
-    text-shadow: none;
-    width: auto;
-}
 
 .flex-content {
     display: flex;
@@ -887,13 +928,16 @@ div.hssurveys_full {padding: 2%; width: 96%;}
     padding:40px 0;
 }
 
-.info-list li {
+.info-list li, .cat-cookies-policy #main li {
     display:inline-block;
     position: relative;
     padding-right: 3%;
     width:44%;
 }
-.info-list li:before {
+.cat-cookies-policy #main li {
+    width:30%;    
+}
+.info-list li:before, .cat-cookies-policy #main li:before {
     display:inline-block;
     content:'·';
     margin-right: 5px;
@@ -911,7 +955,8 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 .pad0-10 {
     padding:0 10%;
 }
-.mb10 {margin-bottom: 16px;}
+.mb10 {margin-bottom: 10px;}
+.mb16 {margin-bottom: 16px;}
 .left-col {
     padding-right: 20px;
 }
@@ -919,16 +964,109 @@ div.hssurveys_full {padding: 2%; width: 96%;}
     padding-left: 20px; 
 }
 .left-col-m {
-    padding-right: 10px;
+    padding-right: 3%;
 }
 .right-col-m {
-    padding-left: 10px; 
+    padding-left: 3%;   
 }
+.brd-v {
+    border-right: 1px solid currentcolor;
+}
+
 #intro-content {
     background-color: #ddbe7d;
     background-size: 100% auto ;
     background-repeat: no-repeat;
     color: #3B3B3B;
+}
+.left-3col {
+    padding-right: 1%;
+}
+.right-3col {
+    padding-left: 1%;
+}
+
+.mid-3col {
+    padding:0 1%;
+}
+.img-full-width {
+    width: 100%;
+}
+h2 + h3 {
+    margin:-10px 0;
+    opacity: 0.5;
+}
+.mrgtop40 {
+    margin-top: 40px;
+}
+.mrgbottom40 {
+    margin-bottom: 40px;
+}
+.dark-grey hr {
+    border-top:0;
+    opacity: 0.2;
+}
+.row .container, .cat-offers .container {
+    padding: 50px 0;    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.offers-listing-wrapper h2 {
+    display: none;
+}
+.cat-offers .container, .cat-offer-detail .container {
+    margin: 0 auto;
+}
+/*Engine display*/
+.engine-button  {
+    background: #EBEBEA;
+    display: block;
+    float:right;
+    margin-top:30px;
+    padding: 10px 10px 10px 16px;
+    position:relative;
+    
+    border: 0;
+    border-radius: 2px;
+    color: #A1A1A1;
+    font-size: 1.5em;
+    padding: 10px 16px;
+    text-shadow: none;
+    width: auto;
+}
+.engine-button.collapsed {
+    margin-top:30px;    
+}
+.engine-button:hover {
+    color: #A1A1A1;
+    text-decoration: none;
+}
+.engine-button.collapsed:hover {
+    color:#FFF; 
+}
+.engine-button:after, .engine-button.collapsed:after {
+    content:"";
+    display: inline-block;
+    background-image: url('/files/how-hide_engine-icons.png');
+    background-position: 0 14px;
+    
+    height:14px;
+    margin-left: 5px;
+    opacity: 0.4;
+    position:relative;
+    width:19px;
+}
+.engine-button.collapsed:after {
+    background-position: 0 2px;
+    opacity: 1;
+}
+#header .accordion-body {
+    margin: -15px 0 -10px;  
+}
+#collapseOne {
+    background: #ebebea;
+    min-height: 0;
 }
 
 
@@ -993,12 +1131,6 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 .cat-rooms #intro-content {
     background-image: url('/files/intro-image-rooms.jpg');
 }
-.row .container {
-    padding: 50px 0;    
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 #intro-content .container {
     padding: 40px 8%;
 }
@@ -1059,8 +1191,64 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 
 
 /*SERVICES*/
-.cat-services #intro-content {
+.cat-services #intro-content, .cat-legal #intro-content {
     background-image: url('/files/intro-image-services.jpg');
+}
+
+/*ROOMS*/
+.cat-location #intro-content {
+    background-image: url('/files/location-header.jpg');
+}
+/*SURROUNDINGS*/
+.cat-tourism #intro-content {
+    background-image: url('/files/header-surroundings.jpg');
+}
+/*OFFERS*/
+.cat-offers #intro-content, .cat-contact #intro-content {
+    background-image: url('/files/header-offers-v2.jpg');
+}
+.offers-detail-wrapper .offer-wrapper {
+   padding: 40px 20px!important;
+   border: 0!important;
+   background-color: #ddbe7d!important;
+}
+.offers-detail-wrapper .back {
+    padding-right: 20px;
+    float: right;
+}
+.offers-detail-wrapper .back a {
+    color: #FFF;
+}
+.offers-detail-wrapper .offer-header-content-wrapper .offer-description, .offers-detail-wrapper .offer-header-content-wrapper .offer-board, .offers-detail-wrapper .offer-header-content-wrapper .offer-social-links {
+    color: #333;
+}
+.offers-detail-wrapper {
+    padding:40px 0!important;
+}
+
+
+/*Cookies Policy*/
+.cat-cookies-policy .container {
+    padding: 40px 8%;
+}
+
+/*Legal Policy*/
+.cat-legal #main p {
+    color: #333;
+}
+
+/*Contact*/
+.cat-contact .info-list li {
+    display: block;
+    width: 100%;
+}
+.wpcf7 .wpcf7-text, .wpcf7 textarea {
+    width: 100%;
+}
+.wpcf7 {
+    margin: 0 auto!important;
+    text-align: center;
+    width: 50%;
 }
 
 
@@ -1094,10 +1282,9 @@ div.hssurveys_full {padding: 2%; width: 96%;}
     background: #3D3635;
     bottom: -20px; top: auto;
 }
-.dark-grey * {
+.dark-grey *, #main .dark-grey h2 {
     color: #FFF;
 }
-
 .light-brown {
     background-color: #ddbe7d;
 }
@@ -1122,7 +1309,12 @@ div.hssurveys_full {padding: 2%; width: 96%;}
     background: #ddbe7d;
     bottom: -20px; top: auto;
 }
-
+.light-brown p, #intro-content p {
+    color: #333;
+}
+.last-content:after {
+    display: none;    
+}
 
 /*back to top*/
 #back-to-top {
@@ -1148,7 +1340,7 @@ div.hssurveys_full {padding: 2%; width: 96%;}
 /*-------------------------------- MEDIA QUERYS --------------------------------*/
 /* Large desktop */
 @media (min-width: 1200px) {
-    h4 {
+    .home h4, h4 {
         font-size: 1.4em;
     }
     ul#menu_web > li {  
@@ -1212,6 +1404,13 @@ div.hssurveys_full {padding: 2%; width: 96%;}
         line-height: 1.6em
     }
     .mb10 {margin-bottom: 30px;}
+    .engine_mashup > div form .control-group {margin: 0px 20px 0px 0px!important;}
+    .engine_mashup > div form .control-group label {
+        color: #A1A1A1;
+        font-size: 20px;
+        line-height: 38px;
+        margin-right:10px;
+    }
 }
 
 /* ipad portrait - landscape */
