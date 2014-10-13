@@ -1,8 +1,18 @@
-<section id="intro" class="row">
-	<h1>{1}</h1>
-	<p>{2}</p>
-	<ul>
-		<li>{3}</li>
-		<li>{4}</li>
-	</ul>
+<section id="intro-content" role="presentation" class="row">
+	<div class="container text-center">
+		<i class="floral">[get_image id="40" size="large" alt="{1}" align="-center"]</i>
+		<h1>{1}</h1>
+		<h2>{2}</h2>
+		<ul class="info-list">
+			<li>{3}</li>
+			<li>{4}</li>
+		</ul>
+	</div>
+</section>
+
+
+<section id="contact-info" class="row">
+	<div class="container">
+			[contact-form-7 id="408" title="Contacto"]
+	</div>
 </section>
