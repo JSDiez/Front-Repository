@@ -1,0 +1,750 @@
+/*
+Theme Name: Hotel Alfonso Vi - 2014
+Theme URI: hotelalfonsovi.com
+Description: Hotel Alfonso VI - 2014
+Template: mirai
+Author: Mirai Espana
+*/
+
+
+/*---------------------------- GENERIC STYLES -------------------------------*/
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+
+h2, h3, h4 {
+    font-family: 'Droid Sans', sans-serif;
+}
+
+a {}
+a:hover {text-decoration:underline;}
+
+body p {font-family: 'Open Sans', sans-serif;}
+
+#header {}
+#header .content {}
+
+#main {}
+#main .content {}
+
+#footer {}
+#footer .content {}
+
+/* Cuando en bootstrap el contenido es container, posicion relativa para los elementos en absoluta */
+#header .content, #main .content, #footer .content {position: relative;}
+
+/*------------------------------------------------------------------------------*/
+
+
+/*------------------------------------ LOGO ------------------------------------*/
+#logo {}
+/*------------------------------------------------------------------------------*/
+
+
+/*--------------------------------- QTRANSLATE ---------------------------------*/
+.widget_qtranslate {text-align: right;}
+.widget_qtranslate h3 {}
+.widget_qtranslate ul {}
+.widget_qtranslate ul li {}
+.widget_qtranslate ul li:first-child {}
+.widget_qtranslate ul li.last-child {}
+.widget_qtranslate ul li a {}
+.widget_qtranslate ul li a:hover {}
+.widget_qtranslate ul li.active a {}
+.widget_qtranslate ul li.active a,
+.widget_qtranslate ul li.current-menu-item a {}
+.widget_qtranslate ul li.active a {}
+.widget_qtranslate ul li.current-menu-item a:hover,
+.widget_qtranslate ul li.active a:hover {}
+.widget_qtranslate ul li.active a:hover {}
+
+.widget_qtranslate select {width: 100px;}
+
+.widget_qtranslate ul li {display: inline-block;}
+.widget_qtranslate ul li.active {display: none;}
+
+/*------------------------------------------------------------------------------*/
+
+
+/*-------------------------------- MENU-NAV-WEB --------------------------------*/
+ul#menu_web {}
+ul#menu_web li {}
+ul#menu_web li a {}
+
+ul#menu_web > li {display: inline-block; position: relative;}
+ul#menu_web > li a {}
+ul#menu_web > li:hover a {}
+ul#menu_web > li a:hover {}
+ul#menu_web > li:hover ul.sub-menu {}
+ul#menu_web > li.current-menu-item {}
+
+ul#menu_web > li a:hover, 
+ul#menu_web > li.current-menu-item a,
+ul#menu_web > li.current-menu-parent a {}
+
+ul#menu_web > li ul.sub-menu {}
+ul#menu_web > li ul.sub-menu li a {} 
+ul#menu_web > li ul.sub-menu li a:hover,
+ul#menu_web > li ul.sub-menu li.current-menu-item a {} 
+ul#menu_web > li.current-menu-item ul.sub-menu {}
+ul#menu_web > li.current-menu-parent ul.sub-menu {}
+ul#menu_web li.current-menu-item ul.sub-menu .current_page_item a {}
+
+ul#menu_web > li div[data-ajax-menu-parent] {}
+/*------------------------------------------------------------------------------*/
+
+
+/*-------------------------------  GOOGLE MAPS ---------------------------------*/
+.mapa {margin: 10px 0;}
+.mapa .external-link {}
+.mapa .external-link:hover {}
+.mapa .map_canvas {margin-bottom: 10px; width: 100% !important;}
+.mapa .map_canvas p {}
+.mapa .map_canvas img {}
+.mapa .formRuta {}
+.mapa .formRuta label {}
+.mapa .formRuta input {margin-right: 10px;}
+.mapa .formRuta input.origen {}
+.mapa .formRuta input.calculaRuta {}
+.mapa .formRuta input.calculaRuta:hover {}
+.mapa .formRuta input.calculaRuta.disabled,
+.mapa .formRuta input.calculaRuta.disabled:hover {}
+
+.mapa .formRuta a.ocultaRuta {}
+.mapa .formRuta a.ocultaRuta:hover {}
+
+.mapa .alert,
+.adp-warnbox {
+    color: #000;
+    margin-top: 20px;
+}
+
+.mapa .alert button.close {}
+
+.mapa .ruta {width: 100% !important;}
+.mapa .ruta table {}
+.mapa .ruta table img {}
+
+.mapa .googleMapsContainer {}
+.mapa .googleMapsContainer .place, .mapa .links-cercanos .googleMapsContainer .linkGoogleMaps {display: inline-block;}
+.mapa .googleMapsContainer .place {}
+.mapa .googleMapsContainer .linkGoogleMaps {}
+.mapa .googleMapsContainer .linkGoogleMaps:hover {cursor: pointer;}
+
+/*------------------------------------------------------------------------------*/
+
+
+/*-------------------------  MOTOR MASHUP CALENDAR -----------------------------*/
+/* OJO!!!!! acordaos de revisar los botones de prev/next del calendar */
+.ui-datepicker .ui-datepicker-header,
+.ui-datepicker .ui-datepicker-buttonpane button,
+.ui-datepicker td:hover a {}
+#ui-datepicker-div {font-size: 14px !important;}
+/*------------------------------------------------------------------------------*/
+
+
+/*------------------------------  NEW MOTOR MASHUP ---------------------------------*/
+/*propias del sitio*/
+.engine_mashup  {}
+.engine_mashup > div {}
+.engine_mashup > div .text-before {}
+.engine_mashup > div .text-after {}
+.engine_mashup > div form {}
+.engine_mashup > div form legend {}
+.engine_mashup > div form .control-group {}
+.engine_mashup > div form .control-group label {}
+.engine_mashup > div form .control-group label.label-code {}
+.engine_mashup > div form .control-group span.help-inline {}
+.engine_mashup > div form .control-group span.legend a {}
+.engine_mashup > div form .control-group select,
+.engine_mashup > div form .control-group input[type=text] {}
+.engine_mashup > div form .control-group input[type=text].date {}
+.engine_mashup > div form .control-group input[type=text].code {}
+.engine_mashup > div form .button-group {}
+
+/* BOTONES RESERVAR Y ENVIAR (formularios, blog...) */
+.engine_mashup > div form .button-group input[type="submit"],
+.mapa .formRuta input.calculaRuta, #mirai_be7 input,
+#respond .form-submit #submit,
+.wpcf7 .wpcf7-form input.wpcf7-submit {
+
+}
+
+.engine_mashup > div form .button-group input[type="submit"]:hover,
+.mapa .formRuta input.calculaRuta:hover, #mirai_be7 input:hover,
+#respond .form-submit #submit:hover,
+.wpcf7 .wpcf7-form input.wpcf7-submit:hover {
+
+}
+/* ----- */
+
+/* SÓLO BOTÓN DE RESERVAR */
+.engine_mashup > div form .button-group input[type=submit] {}
+.engine_mashup > div form .button-group input[type=submit]:hover {}
+/* ----- */
+
+.engine_mashup > div form .button-group input[type=submit]:not([disabled=disabled]):hover {}
+.engine_mashup > div form .button-group input[type=submit][disabled=disabled]:hover {}
+
+.engine_mashup > div form .button-group a {}
+.engine_mashup > div form .button-group a:hover {}
+.engine_mashup > div form .button-group .icon-lock {margin: 3px 2px 0 0;}
+
+/* ICONO DEL CANDADO EN BLANCO */
+/*.engine_mashup > div form .button-group .icon-lock {background-image: url("/wp-content/themes/mirai/img/glyphicons-halflings-white.png");} */
+
+.engine_mashup > div form .button-group .tracking-link {}
+
+/* square two-columns (column-width)*/
+.engine_mashup.square.two-columns > div form .control-group label {width:35%;}
+.engine_mashup.square.two-columns > div form .control-group span.legend {margin-left:35%;}
+.engine_mashup.square.two-columns > div form .control-group input[type="text"] {width:56%;}
+
+/* tabs */
+.engine_mashup .tabbable {}
+.engine_mashup .tabbable .nav-tabs {}
+.engine_mashup .tabbable .nav-tabs li a {}
+.engine_mashup .tabbable .nav-tabs li.active a {}
+.engine_mashup .tabbable .tab-content {
+    background: #dddddd; /* Old browsers */
+    background: -moz-linear-gradient(top, #dddddd 1%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#dddddd), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #dddddd 1%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #dddddd 1%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #dddddd 1%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #dddddd 1%,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.engine_mashup .tabbable .tab-content > .tab-pane {}
+/* New engine calendar input and selection range styles */
+.engine_mashup > div ._activeDatePicker label {
+    /* INHERITED:
+    text-shadow: 1px 1px 3px #777 !important;*/
+}
+.engine_mashup > div ._activeDatePicker .hasDatepicker {
+    /* INHERITED:
+    border-color: #ccc;
+    background-color: #eee;*/
+}
+.engine_mashup > div ._inactiveDatePicker {
+    /* INHERITED:
+    opacity: 0.5;*/
+}
+.engine-datepicker .ui-datepicker-calendar ._checkin-date {
+    /* INHERITED:
+	opacity: 1;*/
+}
+.ui-datepicker-calendar ._checkin-date {}
+.ui-datepicker-calendar ._checkin-date span,
+.ui-datepicker-calendar ._checkin-date a {
+    /* INHERITED:
+    text-align: center;
+    font-weight: bold;*/
+}
+.ui-datepicker-calendar ._selected-date {}
+.ui-datepicker-calendar ._selected-date span,
+.ui-datepicker-calendar ._selected-date a {
+    /* INHERITED:
+    text-align: center;
+    font-weight: bold;*/
+}
+.ui-datepicker-calendar ._last-selected-date {}
+.ui-datepicker-calendar ._last-selected-date span,
+.ui-datepicker-calendar ._last-selected-date a {}
+.ui-datepicker-calendar ._checkout-date {}
+.ui-datepicker-calendar ._checkout-date span,
+.ui-datepicker-calendar ._checkout-date a {
+    /* INHERITED:
+    text-align: center;
+    text-decoration: underline;*/
+}
+.ui-datepicker-calendar ._checkout-date span:after,
+.ui-datepicker-calendar ._checkout-date a:after {}
+
+/* showInlineLabelsFields (WONT WORK ON IE8) */
+html:not(.ie8) .engine_mashup.showInlineLabelsFields {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields .control-group {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields .control-group label {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields .empty-control-group {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields .empty-control-group input {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields .empty-control-group label {}
+html[lang=ru]:not(.ie8) .engine_mashup.showInlineLabelsFields #checkOutDate {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields:not(.promo) #clientCode {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields.promo #clientCode {}
+html[lang=ru]:not(.ie8) .engine_mashup.showInlineLabelsFields #clientCode {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields .empty-control-group .empty-field {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields .filled-control-group {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields .filled-control-group label {}
+html:not(.ie8) .engine_mashup.showInlineLabelsFields .filled-control-group .empty-field {}
+
+/*------------------------------------------------------------------------------*/
+
+
+/*---------------------------------  POPOVER -----------------------------------*/
+.popover {}
+.popover .popover-inner {}
+.popover .popover-title {}
+/*------------------------------------------------------------------------------*/
+
+
+/*---------------------------------  TOOLTIP -----------------------------------*/
+.tooltip.right .tooltip-arrow {/*border-right-color: <color> !important;*/}
+.tooltip .tooltip-inner {/*background-color: <color>;*/}
+/*------------------------------------------------------------------------------*/
+
+
+/*------------------------------  OFFERS MASHUP --------------------------------*/
+.offers-mashup {}
+.offers-mashup h3 {}
+.offers-mashup img {}
+.offers-mashup .carousel {}
+.offers-mashup .carousel-inner {}
+.offers-mashup .carousel-inner .item {}
+.offers-mashup .carousel-control {}
+.offers-mashup .carousel-control:hover {}
+.offers-mashup .carousel-control.right {}
+.offers-mashup .carousel-control.right:hover {}
+.offers-mashup dl {}
+.offers-mashup dl dt {}
+.offers-mashup dl dd {}
+.offers-mashup .rss-link {}
+.offers-mashup .more-info-link {}
+.offers-mashup .more-info-link:hover {}
+
+.offers-slide .slide .no-offers {}
+.offers-mashup-inner {}
+.offers-mashup-slide {}
+
+/*------------------------------------------------------------------------------*/
+
+
+/*------------------------------  OFFERS PAGES ---------------------------------*/
+#offersHs #headerOffers {display: none;}
+#offersHs .rowOffers {
+    padding: 0 !important;
+    width: 96% !important;
+}
+#offersHs .contents h2 {color: inherit !important;}
+#cuadroOfertas, #cuadroOpiniones {
+    margin-top: 20px;
+    padding: 0;
+}
+#offersHs .rowOffers {min-height: 230px !important;}
+#offersHs ul, #offersHs .rowOffers > p {padding: 15px 20px;}
+
+
+/*------------------------------------------------------------------------------*/
+
+
+/*------------------------------  NEW OFFERS PAGES ------------------------------*/
+.offers-listing-wrapper {}
+.offers-listing-wrapper .offer .offer-link {}
+.offers-listing-wrapper .offer .offer-photo {}
+.offers-listing-wrapper .offer .offer-button {}
+.offers-detail-wrapper {}
+.offers-detail-wrapper .offer-wrapper {}
+.offers-detail-wrapper .offer-photo img {}
+.offers-detail-wrapper .offer-features-wrapper {}
+.offers-detail-wrapper .offer-extra-wrapper {}
+.offers-detail-wrapper .offer-extra-wrapper.section .offer-extra-row .offer-extra-offers {}
+.offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline {}
+.offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .ui-datepicker-header {}
+.offers-detail-wrapper .offer-calendar-wrapper .offer-button {}
+/*------------------------------------------------------------------------------*/
+
+
+/*----------------------------  OPINIONES MASHUP -------------------------------*/
+.mirai_opiniones {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs #hsRating {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs #hsRating #scoreTop {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs #hsRating #scoreTop #score {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs #hsRating #scoreTop #ratingBar {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs #hsRating #mirai_recommend {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs #hsRating #mirai_recommend h3 {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs #hsRating #mirai_reviewSouce {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs #hsRating .mirai_btReview {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs #hsRating .mirai_btReview:hover {}
+.mirai_opiniones #xdhsReviewSummaryContent-XdHs #hsRating #writeReviews {}
+.mirai_opiniones > p {display:none;} /* link hotelsearch.com */
+/*------------------------------------------------------------------------------*/
+
+
+/*------------------------------  OPINIONES PAGE -------------------------------*/
+div.hssurveys_full .comments p.commentsPerson span.date {color: #000 !important;}
+div.hssurveys_full .noLink, div.hssurveys_full .noLink a {color: #000 !important;}
+div.hssurveys_full {padding: 2%; width: 96%;}
+.reviewsOn .questions li p.answer {line-height: 22px !important; padding: 0 6px 0 10px !important;}
+
+/*------------------------------------------------------------------------------*/
+
+
+/*-------------------------------  SOCIAL MEDIA --------------------------------*/
+#social-media {}
+#social-media h3 {}
+#social-media ul {text-align: right;}
+#social-media ul li {display: inline-block; text-align: left;}
+#social-media ul li:first-child {}
+#social-media ul li a {
+    /* New Social Media icons in COLOR and hover in COLOR */
+    background-image: url('../mirai/images/sprite_color.png');
+
+    /* New Social Media icons in COLOR and hover in GREY */
+    /*background-image: url('../mirai/images/sprite_grey.png');*/
+}
+
+/* Social Media Extra 1 */
+#social-media ul li .extra1_link {background-image: url(); background-position:0 0;}
+#social-media ul li .extra1_link:hover {}
+/* Social Media Extra 2 */
+#social-media ul li .extra2_link {background-image: url(); background-position:0 0;}
+#social-media ul li .extra2_link:hover {}
+/* Social Media Extra 3 */
+#social-media ul li .extra3_link {background-image: url(); background-position:0 0;}
+#social-media ul li .extra3_link:hover {}
+
+/*------------------------------------------------------------------------------*/
+
+
+/*-----------------------------------  VCARD -----------------------------------*/
+.hotelschema {}
+.hotelschema h3 {}
+.hotelschema .name {}
+.hotelschema .separator {}
+.hotelschema a {}
+.hotelschema a:hover {}
+.address_phone {}
+/*------------------------------------------------------------------------------*/
+
+
+/*---------------------------  FULLSCREEN SLIDESHOW ----------------------------*/
+.fullscreen-slideshow .slideshow .contSlideshow .txtslider {}
+
+/* Fix background fullscreen image with singlepic */
+#sidebar-preheader .ngg-singlepic{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    padding:0!important;
+    z-index:-1!important;
+}
+
+/*------------------------------------------------------------------------------*/
+
+
+/*-----------------------------  CAROUSEL SLIDESHOW ----------------------------*/
+.on-page-slideshow .slideshow {}
+.on-page-slideshow .slideshow .contSlideshow .txtslider {}
+.on-page-slideshow > div, .on-page-slideshow > div .contSlideshow img {}
+.on-page-slideshow .prev, .on-page-slideshow .next {}
+.on-page-slideshow .prev:hover, .on-page-slideshow .next:hover {}
+.on-page-slideshow .prev {}
+.on-page-slideshow .prev:hover {}
+.on-page-slideshow .next {}
+.on-page-slideshow .next:hover {}
+.on-page-slideshow div[class*="pager"] {z-index: 10;}
+.on-page-slideshow div[class*="pager"] a {}
+.on-page-slideshow div[class*="pager"] a:hover, .on-page-slideshow div[class*="pager"] a.activeSlide {}
+/*------------------------------------------------------------------------------*/
+
+
+/*---------------------------  BACKGROUND SLIDESHOW  ---------------------------*/
+.background-slideshow {}
+.background-slideshow .slideshow {}
+.background-slideshow .slideshow .contSlideshow .txtslider {}
+.background-slideshow .prev, .background-slideshow .next {}
+.background-slideshow .prev:hover, .background-slideshow .next:hover {}
+.background-slideshow .prev {}
+.background-slideshow .prev:hover {}
+.background-slideshow .next {}
+.background-slideshow .next:hover {}
+.background-slideshow div[class*="pager"] {}
+.background-slideshow div[class*="pager"] a {}
+.background-slideshow div[class*="pager"] a:hover, .background-slideshow div[class*="pager"] a.activeSlide {}
+/*------------------------------------------------------------------------------*/
+
+
+/*-------------------------------  BOOKING PAGES -------------------------------*/
+.bookingstep1 {
+    /*background: url("") no-repeat fixed center top;
+    background-size: 100% 100%;*/
+}
+.bookingstep1 header #logo {}
+.bookingstep1 #motor_reservas #mirai_bookentrance {padding: 10px 0;}
+
+.bookingstep1 ul#menu_web li a,
+.bookingstep1 #motor_reservas #mirai_bookentrance #mirai_be7 input:hover {text-decoration: none !important;}
+
+/* FONT FAMILY PARA EL MOTOR */
+.bookingstep1 #motor_reservas #mirai_bookentrance #mirai_be7 input,
+.bookingstep1 #mirai_be0 input,
+.bookingstep1 #mirai_be0 span,
+.bookingstep1 #mirai_be0 select {
+	font-family: Arial;
+}	
+.bookingstep1 #header {}
+.bookingstep1 #header .content {
+    margin: 0 auto;
+    width: 960px;
+}
+#mirai_be0, #mirai_be2, #mirai_be0 input, #mirai_be0 select {font-size: 15px !important;}
+
+/* MOSTRAR MENU EN BOOKINGSTEP */
+.bookingstep1 ul#menu_web{display:block;}
+.bookingstep1 ul#menu_web li a{text-decoration:none;}
+.bookingstep1 .booking_mobile, .bookingstep1 .sub-menu {display: none!important;}
+
+
+/*------------------------------------------------------------------------------*/
+
+/*-------------------------------- PHOTOS PAGES --------------------------------*/
+.ngg-galleryoverview {}
+.ngg-galleryoverview .ngg-gallery-thumbnail {}
+.ngg-galleryoverview .ngg-gallery-thumbnail img {}
+.ngg-galleryoverview .ngg-gallery-thumbnail img:hover {}
+/*------------------------------------------------------------------------------*/
+
+
+/*---------------------------------- SHADOWBOX ---------------------------------*/
+#sb-container {}
+#sb-container #sb-overlay {background-color:#000 !important;}
+#sb-container #sb-wrapper #sb-wrapper-inner {border: 1px solid #303030 !important;}
+#sb-container #sb-info {}
+#sb-container #sb-info #sb-counter {}
+#sb-container #sb-info #sb-nav {}
+#sb-container #sb-info #sb-nav #sb-nav-close {}
+#sb-container #sb-info #sb-nav #sb-nav-next {}
+#sb-container #sb-info #sb-nav #sb-nav-previous {}
+/*------------------------------------------------------------------------------*/
+
+/*******************************************************/
+/* New style prev, next and close Shadowbox */
+/*******************************************************/
+
+/* ¡¡¡CUIDADO!!! LAS VISITA VIRTUALES NO FUNCIONAN CON ESTOS ESTILOS */
+/* DESCOMENTAR PARA UTILIZAR */
+
+/*
+#sb-container #sb-info {
+    height: 97.5%;
+    left: 0;
+    margin-top: 27px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+#sb-container #sb-info #sb-counter {
+    bottom: 10px;
+    font-size: 15px;
+    left: 10px;
+    position: absolute;
+}
+
+#sb-container #sb-info #sb-nav {width: 100%;}
+
+#sb-nav a {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    background-position: center center;
+    bottom: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 30%;
+}
+
+
+
+#sb-container #sb-info #sb-nav #sb-nav-close {
+    background-color: #333333;
+    background-image: url("../mirai/images/closed.png");
+    bottom: auto;
+    height: 16px;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 16px;
+    z-index: 1;
+}
+
+#sb-container #sb-info #sb-nav #sb-nav-previous {
+    background-position: 5% center;
+    background-image: url("../mirai/images/arrow-left.png");
+    left: 0;
+}
+
+#sb-container #sb-info #sb-nav #sb-nav-next {
+    background-position: 95% center;
+    background-image: url("../mirai/images/arrow-right.png");
+}
+
+#sb-container #sb-info #sb-nav #sb-nav-previous:hover {
+    background-position: 1% center;
+
+}
+
+#sb-container #sb-info #sb-nav #sb-nav-next:hover {
+    background-position: 99% center;
+}
+
+.ie8 #sb-nav a {
+    height: 40px;
+    top: 50%;
+    width: 40px;
+}
+*/
+
+/*******************************************************/
+/*******************************************************/
+
+
+/*---------------------------------- IATA CONTENT ------------------------------*/
+.mi-iata-content {}
+.mi-iata-content .mi-agencies {}
+.mi-iata-content .mi-companies {}
+.mi-iata-content .mi-action {}
+.mi-iata-content .mi-action #check .engine_mashup {
+    background: transparent;
+}
+.mi-iata-content .mi-action #check .engine_mashup form {
+    text-align: left;
+    padding: 0px;
+}
+.mi-iata-content .mi-action #check .engine_mashup form .control-group {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+.mi-iata-content .mi-action #check .engine_mashup form .control-group label {
+    display: block;    
+}
+.mi-iata-content .mi-action #check .engine_mashup form .control-group #engine-submit-wrapper {
+    margin-top: 20px;
+}
+.mi-iata-content .mi-action #request input[type=submit],
+.mi-iata-content .mi-action #check .engine_mashup form .button-group #engine-submit-button {
+    margin-top: 30px !important;
+    width: 223px !important;
+    padding: 9px 14px;
+    font-size: 16px !important;
+    font-weight: normal;
+    line-height: normal;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 40px;
+    text-transform: lowercase;
+    background-color: #999 !important;
+    background-image: none;
+}
+.mi-iata-content .mi-action #request {}
+.mi-iata-content .mi-action #request label {
+    color: #fff;
+}
+.mi-iata-content .mi-action #request span {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.mi-iata-content .mi-action .tab-pane input[type=text] {
+    height: 20px;
+    padding: 4px 6px;
+}
+.mi-iata-content .mi-action .tab-pane input.code {
+    width: 210px !important;
+}
+.mi-iata-content .mi-action .tab-pane select {
+    height: 30px;
+}
+/*------------------------------------------------------------------------------*/
+
+
+/*------------------------------------ BLOG ------------------------------------*/
+.blog-wrapper {padding: 10px 20px;}
+.post {}
+.post h2 {}
+.post h2 a {}
+.post .meta {}
+.post .meta .autor_post {}
+.post .meta .fecha_post {}
+.post .meta .comentarios_post {}
+.post .entry {}
+.post .entry .post-edit-link {}
+.post .entry p {}
+.post .entry .categorias {}
+.post .entry .categorias a {}
+.paginaAnterior {}
+.paginaSiguiente {}
+.post #respond {}
+.post #respond h3 {}
+.post #respond form {}
+.post #respond form .logged-in-as {}
+.post #respond form .comment-form-comment {}
+.post #respond form .comment-form-comment label {}
+.post #respond form .comment-form-comment textarea {}
+.post #respond form .comment-form-comment .form-submit {}
+.post #respond form .comment-form-comment .form-submit input {}
+.post #prev_post {}
+.post #next_post {}
+.post #prev_post a {}
+.post #next_post a {}
+.post .entry img {
+    box-shadow: 0 0 10px #333333;
+    -webkit-box-shadow: 0 0 10px #333333;
+	border: 5px solid #FFF;
+}
+.post .entry img.aligncenter {}
+.post .entry img.alignleft {}
+.post .entry img.alignright {}
+
+.blog-wrapper .entry ol, .blog-wrapper .entry ul {margin-bottom: 20px;}
+.blog-wrapper .entry li {margin-left: 22px;}
+.blog-wrapper .entry ol li {list-style-type: decimal;}
+.blog-wrapper .entry ul li {list-style-type: disc;}
+/*------------------------------------------------------------------------------*/
+
+
+/*--------------------------- SEARCH POST ON THE BLOG --------------------------*/
+.widget_search {}
+.widget_search form {}
+.widget_search form label {}
+.widget_search form input[type=text] {}
+.widget_search form input[type=submit] {}
+/*------------------------------------------------------------------------------*/
+
+
+/*-------------------------- LINK VER VERSIÓN COMPLETA -------------------------*/
+#footer .mobile-version {}
+#footer .mobile-version a {}
+/*------------------------------------------------------------------------------*/
+
+
+/*--------------------------------- SITE STYLES --------------------------------*/
+
+/*------------------------------------------------------------------------------*/
+
+/*-------------------------------- MEDIA QUERYS --------------------------------*/
+/* Large desktop */
+@media (min-width: 1200px) {}
+
+/* ipad portrait - landscape */
+@media (min-device-width: 768px) and (max-device-width: 979px){}
+
+/* customize ipad portrait */
+@media (min-device-width: 768px) and (max-device-width: 979px) and (orientation : portrait) {
+    .bookingstep1 #mirai_roomSelectionContainer {width: 98%;}
+    .bookingstep1 #header .content {width: 100%;}
+}
+
+/* customize ipad landscape */
+@media (min-device-width: 768px) and (max-device-width: 979px) and (orientation : landscape) {}
+
+/*------------------------------------------------------------------------------*/
