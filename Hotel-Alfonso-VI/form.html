@@ -1,31 +1,62 @@
-<p><!--:es-->Tu nombre (obligatorio)<!--:--><!--:en-->Your name (required)<!--:--><!--:fr-->Nom (requis)<!--:--><!--:de-->Ihre Name (Pflichtfeld)<!--:--><!--:ja-->Your name (required)<!--:--><!--:ru-->Your name (required)<!--:--><br />
-    [text* your-name] </p>
+<div class="span4  offset2">
+  <h4><!--:es-->Tu nombre (obligatorio)<!--:--><!--:en-->Your name (required)<!--:--><!--:fr-->Nom (requis)<!--:--><!--:de-->Ihre Name (Pflichtfeld)<!--:--><!--:ja-->Your name (required)<!--:--><!--:ru-->Your name (required)<!--:--></h4><br />
+    [text* your-name] </div>
 
-<p><!--:es-->Email (obligatorio)<!--:--><!--:en-->Your name (required)<!--:--><!--:fr-->Nom (requis)<!--:--><!--:de-->Ihre Name (Pflichtfeld)<!--:--><!--:ja-->Your name (required)<!--:--><!--:ru-->Your name (required)<!--:--><br />
-    [email* your-email] </p>
+<div class="span4">
+  <h4><!--:es-->Email (obligatorio)<!--:--><!--:en-->Your name (required)<!--:--><!--:fr-->Nom (requis)<!--:--><!--:de-->Ihre Name (Pflichtfeld)<!--:--><!--:ja-->Your name (required)<!--:--><!--:ru-->Your name (required)<!--:--></h4><br />
+    [email* your-email] </div>
 
-<p><!--:es-->Fecha (dd/mm/aaaa)<!--:--><!--:en-->Date (mm/dd/yyyy)<!--:--><!--:fr-->Date (dd/mm/aaaa)<!--:--><!--:de-->Datum (mm/dd/yyyy)<!--:--><!--:ja-->Date (mm/dd/yyyy)<!--:--><!--:ru-->Date (mm/dd/yyyy)<!--:--><br />
-    [text xxxxxxx] </p>
+<div class="span4 offset2">
+  <h4><!--:es-->Fecha (dd/mm/aaaa)<!--:--><!--:en-->Date (mm/dd/yyyy)<!--:--><!--:fr-->Date (dd/mm/aaaa)<!--:--><!--:de-->Datum (mm/dd/yyyy)<!--:--><!--:ja-->Date (mm/dd/yyyy)<!--:--><!--:ru-->Date (mm/dd/yyyy)<!--:--></h4><br />
+    [text xxxxxxx] </div>
 
-<p><!--:es-->Nº de personas<!--:--><!--:en-->Number of people<!--:--><!--:fr-->Nombre de personnes<!--:--><!--:de-->Anzahl der Personen<!--:--><!--:ja-->Number of people<!--:--><!--:ru-->Number of people<!--:--><br />
-   [text xxxxxxx]  </p>
+<div class="span4">
+  <h4><!--:es-->Nº de personas<!--:--><!--:en-->Number of people<!--:--><!--:fr-->Nombre de personnes<!--:--><!--:de-->Anzahl der Personen<!--:--><!--:ja-->Number of people<!--:--><!--:ru-->Number of people<!--:--></h4><br />
+   [text xxxxxxx]  </div>
 
-<p><!--:es-->Salón<!--:--><!--:en-->Lounges<!--:--><!--:fr-->Salon<!--:--><!--:de-->Saal<!--:--><!--:ja-->Number of people<!--:--><!--:ru-->Number of people<!--:--><br />
-   [select menu-210 "Salón Rincón del Rey" "Salón del Castillo" "Salón Rosa"]</p>
+<div class="span4 offset2">
+  <h4><!--:es-->Salón<!--:--><!--:en-->Lounges<!--:--><!--:fr-->Salon<!--:--><!--:de-->Saal<!--:--><!--:ja-->Number of people<!--:--><!--:ru-->Number of people<!--:--></h4><br />
+   [select menu-210 "Salón Rincón del Rey" "Salón del Castillo" "Salón Rosa"]</div>
 
-<p><!--:es-->Montaje<!--:--><!--:en-->Assembly<!--:--><!--:fr-->Type de salon<!--:--><!--:de-->Umkleidekabinen<!--:--><!--:ja-->Assembly<!--:--><!--:ru-->Assembly<!--:--><br />
+<div class="span4">
+  <h4><!--:es-->Montaje<!--:--><!--:en-->Assembly<!--:--><!--:fr-->Type de salon<!--:--><!--:de-->Umkleidekabinen<!--:--><!--:ja-->Assembly<!--:--><!--:ru-->Assembly<!--:--></h4><br />
    [select menu-215 "<!--:es-->Teatro<!--:--><!--:en-->Theatre<!--:--><!--:fr-->Théâtre<!--:--><!--:de-->Theater<!--:--><!--:ja-->Theatre<!--:--><!--:ru-->Theatre<!--:-->"
    "<!--:es-->Escuela<!--:--><!--:en-->Classroom<!--:--><!--:fr-->Salle<!--:--><!--:de-->Aula<!--:--><!--:ja-->Classroom<!--:--><!--:ru-->Classroom<!--:-->"
    "<!--:es-->Imperial<!--:--><!--:en-->Imperial<!--:--><!--:fr-->Conseil<!--:--><!--:de-->Imperial<!--:--><!--:ja-->Imperial<!--:--><!--:ru-->Imperial<!--:-->"
    "<!--:es-->En U<!--:--><!--:en-->U-Shape<!--:--><!--:fr-->En U<!--:--><!--:de-->In U-Form<!--:--><!--:ja-->U-Shape<!--:--><!--:ru-->U-Shape<!--:-->"
    "<!--:es-->Cocktail<!--:--><!--:en-->Cocktail<!--:--><!--:fr-->Cocktail<!--:--><!--:de-->Cocktail<!--:--><!--:ja-->Cocktail<!--:--><!--:ru-->Cocktail<!--:-->"
    "<!--:es-->Banquete<!--:--><!--:en-->Banquet<!--:--><!--:fr-->Banquet<!--:--><!--:de-->Bankett<!--:--><!--:ja-->Banquet<!--:--><!--:ru-->Banquet<!--:-->"
+   ]</div>
 
-   ]</p>
+<div class="clearfix"></div>
+
+<div>
+  <h4><!--:es-->Servicios de restauración<!--:--><!--:en-->Restoration services<!--:--><!--:fr-->Services<!--:--><!--:de-->Caterer<!--:--><!--:ja-->Restoration services<!--:--><!--:ru-->Restoration services<!--:--></h4><br />
+   [checkbox checkbox-886 use_label_element "<!--:es-->Coffee Break<!--:--><!--:en-->Coffee break<!--:--><!--:fr-->Coffee break<!--:--><!--:de-->Coffee break<!--:--><!--:ja-->Coffee break<!--:--><!--:ru-->Coffee break<!--:-->"
+   "<!--:es-->Cocktail<!--:--><!--:en-->Cocktail<!--:--><!--:fr-->Cocktail<!--:--><!--:de-->Cocktail<!--:--><!--:ja-->Cocktail<!--:--><!--:ru-->Cocktail<!--:-->"
+   "<!--:es-->Copa Bienvenida<!--:--><!--:en-->Welcome cocktail<!--:--><!--:fr-->Cocktail de bienvenue<!--:--><!--:de-->Willkommen Cocktail<!--:--><!--:ja-->Welcome cocktail<!--:--><!--:ru-->Welcome cocktail<!--:-->"
+   "<!--:es-->Comida de empresa<!--:--><!--:en-->Business meeting<!--:--><!--:fr-->Réunion d'affaires<!--:--><!--:de-->Business Meeting<!--:--><!--:ja-->Business meeting<!--:--><!--:ru-->Business meeting<!--:-->"
+   "<!--:es-->Banquete<!--:--><!--:en-->Banquet<!--:--><!--:fr-->Banquet<!--:--><!--:de-->Bankjett<!--:--><!--:ja-->Banquet<!--:--><!--:ru-->Banquet<!--:-->"
+   "<!--:es-->Bodas<!--:--><!--:en-->Weddings<!--:--><!--:fr-->Boissons<!--:--><!--:de-->Hochzeiten<!--:--><!--:ja-->Weddings<!--:--><!--:ru-->Weddings<!--:-->"
+   ]</div>
 
 
 
-<p>[submit "Enviar"]</p>
+<div>
+  <h4><!--:es-->Medios Audiovisuales<!--:--><!--:en-->Audiovisual aids<!--:--><!--:fr-->Médias audiovisuels<!--:--><!--:de-->Audiovisuelle Medien<!--:--><!--:ja-->Audiovisual aids<!--:--><!--:ru-->Audiovisual aids<!--:--></h4><br />
+   [checkbox checkbox-888 use_label_element "<!--:es-->Cañón proyector<!--:--><!--:en-->Projector<!--:--><!--:fr-->Projecteur<!--:--><!--:de-->Cannon-Projektor<!--:--><!--:ja-->Projector<!--:--><!--:ru-->Projector<!--:-->"
+   "<!--:es-->Pantalla<!--:--><!--:en-->Display<!--:--><!--:fr-->Écran<!--:--><!--:de-->Display<!--:--><!--:ja-->Cocktail<!--:--><!--:ru-->Cocktail<!--:-->"
+   "<!--:es-->Mesa de sonido o mezclas<!--:--><!--:en-->Welcome cocktail<!--:--><!--:fr-->Mixer<!--:--><!--:de-->Sound Mixing<!--:--><!--:ja-->Welcome cocktail<!--:--><!--:ru-->Welcome cocktail<!--:-->"
+   "<!--:es-->Micrófonos inalámbricos<!--:--><!--:en-->Business meeting<!--:--><!--:fr-->Microphones sans fil<!--:--><!--:de-->Wireless Mikrofone<!--:--><!--:ja-->Business meeting<!--:--><!--:ru-->Business meeting<!--:-->"
+   "<!--:es-->Traductores<!--:--><!--:en-->Translators<!--:--><!--:fr-->Traducteurs<!--:--><!--:de-->Translators<!--:--><!--:ja-->Translators<!--:--><!--:ru-->Translators<!--:-->"
+   "<!--:es-->WIFI<!--:--><!--:en-->WIFI<!--:--><!--:fr-->WIFI<!--:--><!--:de-->WIFI<!--:--><!--:ja-->WIFI<!--:--><!--:ru-->WIFI<!--:-->"
+   "<!--:es-->ADSL de alta velocidad<!--:--><!--:en-->High speed ADSL<!--:--><!--:fr-->Haut débit ADSL<!--:--><!--:de-->High-Speed-ADSL<!--:--><!--:ja-->High speed ADSL<!--:--><!--:ru-->High speed ADSL<!--:-->"
+   "<!--:es-->Rotafolios<!--:--><!--:en-->Flip chart<!--:--><!--:fr-->Flip Chart<!--:--><!--:de-->Flipcharts<!--:--><!--:ja-->Flip chart<!--:--><!--:ru-->Flip chart<!--:-->"
+   "<!--:es-->Megafonía<!--:--><!--:en-->PA system<!--:--><!--:fr-->Porte-voix<!--:--><!--:de-->Paging<!--:--><!--:ja-->PA system<!--:--><!--:ru-->PA system<!--:-->"
+   ]</div>
+
+
+<div>[submit "<!--:es-->Enviar<!--:--><!--:en-->Send<!--:--><!--:fr-->Envoyer<!--:--><!--:de-->Senden<!--:--><!--:ja-->送る<!--:--><!--:ru-->Отправить<!--:-->"]</div>
 
 
 
