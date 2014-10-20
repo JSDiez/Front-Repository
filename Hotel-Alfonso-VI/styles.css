@@ -82,6 +82,18 @@ p {
     font-size: 18px;
     margin-top: 10px;
 }
+.affix {
+   position: fixed;
+   top: 78px;
+   z-index:100;
+   -webkit-transition: all .4s ease-in-out;
+   transition: all .4s ease-in-out;
+   -o-transition: all .4s ease-in-out;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+    width: 100%;
+}
 #main section .container {
     padding: 40px 0;
 }
@@ -124,6 +136,29 @@ img {
     margin: 0 auto 10px;
     width: 90px;
 }
+.bg-dark {
+    background: #333;
+    color: #FFF;
+}
+.two-col {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: justify;
+    padding: 40px 5%!important;
+}
+.two-col, .two-col .span6, #offers-reviews .span6, .mirai_opiniones, .offers-mashup {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.two-col .left, #offers-reviews .left {
+    padding-right: 15px;
+    position: relative;
+}
+.two-col .right, #offers-reviews .right {
+    padding-left: 15px;
+}
+
 
 /* HOME */
 
@@ -131,11 +166,34 @@ img {
 
 /* ROOMS */
 
-/* SERVICES */
+/* MEETINGS ROOMS */
+span.wpcf7-list-item {
+    display: inline-block;
+}
+span.wpcf7-list-item input {
+    margin: -3px 0 0;
+}
+span.wpcf7-list-item span {
+    margin: 0 10px 0 0;
+}
 
 /* PHOTOS */
 
 /* OFFERS */
+.offers-listing-wrapper, .offers-detail-wrapper {
+    text-align: left;
+    margin: 0 auto;
+}
+.offers-detail-wrapper .offer-header-content-wrapper .offer-title, .offers-listing-wrapper .offer .offer-title {
+    color: #A28B69;
+    font-family: 'Droid Serif', serif;
+}
+.offers-listing-wrapper .offer .offer-link {
+    text-decoration: none;
+}
+.offers-detail-wrapper .offer-calendar-wrapper .offer-button:disabled {
+    opacity: 0.5;
+}
 
 /* REVIEWS */
 div.hssurveys_full .comments p.commentsPerson span.date {
@@ -256,11 +314,13 @@ ul#menu_web li a {
 /* submit buttons (engine mashup, form, blog...) */
 .engine_mashup > div form .button-group input[type="submit"], .mapa .formRuta input.calculaRuta, #mirai_be7 input, #respond .form-submit #submit, .wpcf7 .wpcf7-form input.wpcf7-submit, .offers-listing-wrapper .offer .offer-button, .offers-detail-wrapper .offer-calendar-wrapper .offer-button {
     background: #FFB521;
-    color: #4A4A4A;
+    border: 0!important;
+    border-radius: none!important;
+    color: #4A4A4A!important;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     text-transform: uppercase;
-    text-shadow: none;
+    text-shadow: none!important;
     padding: 10px 20px;
 }
 .engine_mashup > div form .button-group input[type="submit"]:hover, .mapa .formRuta input.calculaRuta:hover, #mirai_be7 input:hover, #respond .form-submit #submit:hover, .wpcf7 .wpcf7-form input.wpcf7-submit:hover, .offers-listing-wrapper .offer .offer-button:hover, .offers-detail-wrapper .offer-calendar-wrapper .offer-button:hover {
@@ -299,11 +359,86 @@ ul#menu_web li a {
     font-size: 14px !important;
 }
 
+/* OFFERS MASHUP */
+.offers-mashup .rss-link {
+    display:none;
+}
+.offers-mashup img {
+    float:left;
+    height: 115px;
+}
+.offers-mashup dl dt {
+    color:#4A4A4A!important;
+    font-family: "Droid Serif";
+    font-size: 28px;
+    font-weight: 300!important;
+}
+
 
 /* REVIEWS MASHUP */
 .mirai_opiniones > p {
     display: none;
 } /* link hotelsearch.com */
+.mirai_opiniones, .offers-mashup {
+    border: 1px solid #C8C8C8;
+    padding:20px 15px;
+    min-height: 150px;
+}
+.mirai_opiniones .mirai_btReview, .offers-mashup .more-info-link {
+    background: none!important;
+    display:inline-block;
+    border: 0;
+    color: #255EA8!important;
+    font-size: 14px!important;
+    /*float: right;*/
+    text-align: right;
+    text-decoration: underline!important;
+    text-transform: none!important;
+    padding: 0;
+    text-align: right;
+}
+#scoreTop {
+    text-align: left;
+}
+#score {
+    background: #333;
+    border-radius: 50%; 
+    color: #FFF;
+    font-size: 40px!important;
+    text-align: center;
+    padding-top:20px!important;
+    float: left!important;
+    height: 80px;
+    width: 100px;
+}
+#mirai_reviewSouce {
+    display:inline-block!important;
+    text-align: right;
+    padding-top: 50px!important;
+}
+#ratingBar {
+    background: url('/files/stars-reviews.png') no-repeat 0 0!important;
+    /*float: left!important;*/
+    height: 19px!important;
+    margin: 0 0 12px 28px!important;
+}
+.hsRating div#scoreTop span#ratingBar span.filledBar {
+    background: url('/files/stars-reviews.png') no-repeat 0 -19px!important;
+    height: 19px!important;
+}
+#offers-reviews .left em {
+    color: #2B2B2B;
+    font-size: 14px;
+    padding: 0 50px 0 145px;
+    text-align: left;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    line-height: 1.3;
+}
+
+
+
 
 
 /* SOCIAL MEDIA */
@@ -410,6 +545,9 @@ ul#menu_web li a {
 @media (min-width: 1200px) {
     #engine .container {
         margin-left: -600px;
+    }
+    #offers-reviews .left em {
+        font-size: 18px;
     }
 }
 
