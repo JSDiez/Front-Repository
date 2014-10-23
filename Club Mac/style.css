@@ -11,28 +11,56 @@ Author: Mirai Espana
 /*---------------------------------------------------------------------------*/
 
 h1 {}
-
-h2 {}
-
-h3 {}
-
+h2, #main .offers-mashup h3 {
+    color: #6B6969;
+    font-size: 40px;
+    line-height: 1.8;
+}
+#main h3 {
+    color: #E86B17;
+    font-size: 27px;
+}
 h4 {}
 
-h1, h2, h3, h4 {}
+h1, h2, h3, h4 {
+    font-family: 'Pacifico', cursive;
+}
+h1 span, h2 span, h3 span, h4 span {
+    color: #008FCF;
+}
 
 a {}
 
 a:hover {}
 
-body {}
+body {
+    color: #6B6969;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+}
 
 #header {}
 
 #header .content {}
 
+#logo {
+    margin-bottom: -50px;
+    z-index: 30;
+    position: relative;
+}
+em.slogan {
+    color: #35C2DB;
+    float: left;
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+    padding-top: 16px;
+}
+
 #main {}
 
-#main .content {}
+#main .content {
+    text-align: center;
+}
 
 #footer {}
 
@@ -47,11 +75,55 @@ img {
     width: auto
 }
 
+[class*="span"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 /*---------------------------------------------------------------------------*/
 /*--------------------------------- PAGES -----------------------------------*/
 /*---------------------------------------------------------------------------*/
 
+/* GLOBAL */
+#header-content {
+    position: relative;
+}
+#header-content img {
+    width: 100%;
+}
+#header-content .title-header {
+    font-size: 50px;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    width: 100%;
+}
+#header-content h1 {
+    background: #FFF;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 70px 40px rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    font-size: 50px;
+    padding: 30px 20px;
+}
+.bg-blue-gradient {    
+    background-image: linear-gradient(180deg,#578FCF 0%, #2966A3 100%);
+    background-image: -moz-linear-gradient(-90deg,rgba(87, 143, 207, 1) 0%, rgba(41, 102, 163, 1) 100%);
+    background-image: -o-linear-gradient(-90deg,rgba(87, 143, 207, 1) 0%, rgba(41, 102, 163, 1) 100%);
+    background-image: -ms-linear-gradient(-90deg,rgba(87, 143, 207, 1) 0%, rgba(41, 102, 163, 1) 100%);
+    background-image: -webkit-linear-gradient(-90deg,#578FCF 0%, #2966A3 100%);
+    padding: 5px 0;
+}
+#main .container {
+    padding: 60px 0;
+}
+
+
 /* HOME */
+#intro .span8 {
+    padding: 0 4%;
+}
 
 /* LOCATION */
 
@@ -90,7 +162,7 @@ div.hssurveys_full {
 .post .entry img {
     box-shadow: 0 0 10px #333333;
     -webkit-box-shadow: 0 0 10px #333333;
-	border: 5px solid #FFF;
+    border: 5px solid #FFF;
 }
 
 .blog-wrapper .entry ol, .blog-wrapper .entry ul {
@@ -113,6 +185,56 @@ div.hssurveys_full {
 /*--------------------------------- WIDGETS ---------------------------------*/
 /*---------------------------------------------------------------------------*/
 
+/* OFFERS */
+.offers-mashup {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.offers-mashup-inner {
+    background: url('/files/spiral-v2.jpg') center;
+    border: 4px dotted #e8d4a4;
+    min-height: 300px;
+}
+#main .offers-mashup h3:before {
+    display:inline-block;
+    background: url("/files/promo-icon.png");
+    content:"";
+    height: 72px;
+    position: relative;
+    top: 20px;
+    width: 72px;
+}
+.offers-mashup .more-info-link {
+    background: #5BB8E3!important;
+    border: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: lowercase;
+    padding: 6px 20px;
+}
+.offers-mashup dl {
+    font-family: 'Lobster Two', cursive;
+    font-size: 22px;
+    line-height:1.4;
+    margin: 20px 0;
+}
+.offers-mashup dd {
+    color: #E86B17;
+    line-height: 1.4;
+}
+.offers-mashup dt {
+    line-height: 1.4;
+}
+
+
+
 /* QTRANSLATE */
 .widget_qtranslate {
     text-align: right;
@@ -132,16 +254,86 @@ div.hssurveys_full {
 
 
 /* MENU WEB */
+ul#menu_web {
+    text-align: right;
+}
 ul#menu_web > li {
+    border-left: 1px solid #9497A6;
     display: inline-block;
+    padding: 0 20px;
     position: relative;
+}
+ul#menu_web > li a {
+    color: #87C9F5;
+    font-size: 18px;
+    line-height: 28px;
+}
+ul#menu_web > li:hover a, ul#menu_web > li.current-menu-item a, ul#menu_web > li.current-menu-parent a {
+    color: #FFF;
+}
+#menu_footer li, #menu_legal li {
+    display: inline-block;
+    padding-right: 10px;
+}
+#menu_footer li {
+    padding-left: 10px;
 }
 
 
+
 /* MOTOR FRONT */
+.engine_mashup {
+    background: #028DDE;
+}
+.engine_mashup > div .text-before a {
+    color: #FFF;
+    display:inline-block;
+    font-family: 'Pacifico',cursive;
+    font-size: 24px;
+    position:relative;
+}
+.engine_mashup > div .text-before a:after {
+    display:inline-block;
+    position: relative;
+    content:"";
+}
+.engine_mashup > div {
+    margin: 0 auto;
+    text-align: center;
+    width: 960px;
+}
+.engine_mashup > div .text-before, .engine_mashup > div form {
+    display: inline-block
+}
+.engine_mashup.inline>div form .button-group {
+    margin-top: -1px;
+}
+.engine_mashup .control-group label {
+    color: #FFF;
+    font-size: 18px;
+    line-height: 40px;
+}
+.engine_mashup .control-group input, .engine_mashup .control-group select {
+    border-radius: 0;
+    padding: 8px;
+}
 /* submit buttons (engine mashup, form, blog...) */
 .engine_mashup > div form .button-group input[type="submit"], .mapa .formRuta input.calculaRuta, #mirai_be7 input, #respond .form-submit #submit, .wpcf7 .wpcf7-form input.wpcf7-submit, .offers-listing-wrapper .offer .offer-button, .offers-detail-wrapper .offer-calendar-wrapper .offer-button {
-	
+    background: rgb(255, 205, 3);
+    background-image: -moz-linear-gradient(0deg,rgba(255, 205, 3, 1) 0%, rgba(255, 219, 75, 1) 100%);
+    background-image: -o-linear-gradient(0deg,rgba(255, 205, 3, 1) 0%, rgba(255, 219, 75, 1) 100%);
+    background-image: -ms-linear-gradient(0deg,rgba(255, 205, 3, 1) 0%, rgba(255, 219, 75, 1) 100%);
+    background-image: -webkit-linear-gradient(0deg,#FFCD03 0%, #FFDB4B 100%);
+    background-image: linear-gradient(90deg,#FFCD03 0%, #FFDB4B 100%);
+    border: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    color: #474747;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 16px;
 }
 .engine_mashup > div form .button-group input[type="submit"]:hover, .mapa .formRuta input.calculaRuta:hover, #mirai_be7 input:hover, #respond .form-submit #submit:hover, .wpcf7 .wpcf7-form input.wpcf7-submit:hover, .offers-listing-wrapper .offer .offer-button:hover, .offers-detail-wrapper .offer-calendar-wrapper .offer-button:hover {
     
@@ -154,11 +346,14 @@ ul#menu_web > li {
 /* ----- */
 
 .engine_mashup > div form .button-group .icon-lock {
-	/*background-image: url("/wp-content/themes/mirai/img/glyphicons-halflings-white.png");*/
+    background-image: url("/wp-content/themes/mirai/img/glyphicons-halflings-white.png");
     margin: 3px 2px 0 0;
 }
+.engine_mashup > div form .button-group .tracking-link {
+    color: #FFF;
+    margin-top: 6px!important;
+}
 
-.engine_mashup > div form .button-group .tracking-link {}
 
 /* square two-columns (column-width)*/
 .engine_mashup.square.two-columns > div form .control-group label {
@@ -286,7 +481,11 @@ ul#menu_web > li {
 /*---------------------------------------------------------------------------*/
 
 /* Large desktop */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {    
+    .engine_mashup > div {
+        width: 1200px;
+    }
+}
 
 /* ipad portrait - landscape */
 @media (min-device-width: 768px) and (max-device-width: 979px){}
