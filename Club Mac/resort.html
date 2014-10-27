@@ -1,23 +1,44 @@
-[mi_exec_widget id=mirai_engine]
+<section id="header-content" role="banner">
+	[get_image id="200"]
+	[mi_exec_widget id=mirai_engine]
+</section>
 
-<h1>{1}<h1>
-<p>{2}</p>
-<p>{3}</p>
-<p>{4}</p>
-<p>{5}</p>
-<p>{6}</p>
+<section id="intro">
+	<div class="container">
+		<h1>{1}</h1>
+		<p>{2}</p>
+		<p>{3}</p>
+		<p>{4}</p>
+	</div>
+</section>
 
-<ul>
-	<li>
-		<h3>{7}</h3>
-		[get_page page="10"]
-	</li>
-	<li>
-		<h3>{9}</h3>
-		[get_page page="11"]
-	</li>
-	<li>
-		<h3>{11}</h3>
-		[get_page page="12"]
-	</li>
-</ul>
+<section id="rooms" class="bg-light-brown last-content">
+	<div class="container">
+		<h2>{5}</h2>
+		<p>{6}</p>
+		<p>{7}</p>
+		<ul>
+			<li class="span4 pdd1">
+				<div class="polaroid-content">
+					[mi_slideshow id=2 class="custom" selector="numbers" shadowbox="on"]
+					<h3>{8}</h3>
+				</div>
+				<a href="[get_page page="10"]" title="{14}">{14}</a>
+			</li>
+			<li class="span4 pdd2">
+				<div class="polaroid-content">
+					[mi_slideshow id=2 class="custom" selector="numbers" shadowbox="on"]
+					<h3>{10}</h3>
+				</div>
+				<a href="[get_page page="11"]" title="{14}">{14}</a>
+			</li>
+			<li class="span4 pdd3">
+				<div class="polaroid-content">
+					[mi_slideshow id=2 class="custom" selector="numbers" shadowbox="on"]
+					<h3>{12}</h3>
+				</div>
+				<a href="[get_page page="12"]" title="{14}">{14}</a>
+			</li>
+		</ul>
+	</div>
+</section>
