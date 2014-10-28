@@ -1,23 +1,48 @@
-<h1>{1}</h1>
-[mi_exec_widget id=mirai_engine]
+<section id="header-content" role="banner">
+	[get_image id="200"]
+	[mi_exec_widget id=mirai_engine]
+</section>
 
-<h2>{2}</h2>
-<p>{3}</p>
-<p>{4}</p>
+<section id="intro">
+	<div class="container">
+		<h1>{2}</h1>
+		<p>{3}</p>
+	</div>
+</section>
 
-<h2>{5}</h2>
+<section id="location" class="bg-light-brown">
+	<div class="container">
+		<p>{4}</p>
+		<div class="mapa">
+			[GoogleMaps id="0" height="350px"]
+			[Ruta id="0" width="500px" cuadrobusqueda="si" comollegar="Como llegar" textoboton="Ruta" transporte="si"]
+		</div>
+	</div>
+</section>
 
-<ul>
-	<li>{6}</li>
-	<li>{7}</li>
-	<li>{8}</li>
-</ul>
+<section id="information">
+	<div class="container">
+		<h2>{5}</h2>
+		<div class="span6 pdd3">
+			<ul>
+				<li>{6}</li>
+				<li>{7}</li>
+				<li>{8}</li>
+			</ul>
+		</div>
+		<div class="span6 pdd1">
+			<p>{9}</p>
+			<p>{10}</p>
+			<p>{11}</p>
+		</div>
+	</div>
+</section>
 
-<p>{9}</p>
-<p>{10}</p>
-<p>{11}</p>
-
-<h2>{12}</h2>
-<p>{13}</p>
-<p>{14}</p>
-<p>{15}</p>
+<section id="check-in">
+	<div class="container">
+		<h2>{12}</h2>
+		<p>{13}</p>
+		<p>{14}</p>
+		<p>{15}</p>
+	</div>
+</section>
