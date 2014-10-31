@@ -21,8 +21,8 @@
 	<div class="container align-left">
 		<ul>
 			<li class="span4 pdd1">
-				<div class="polaroid-content">
-					[get_image id="189"]
+				<div class="polaroid-content only-img">
+					[get_image id="497"]
 				</div>
 				<div class="pdd6">
 					<p>{3}</p>
@@ -33,8 +33,8 @@
 				</div>
 			</li>
 			<li class="span4 pdd2">
-				<div class="polaroid-content">
-					[get_image id="190"]
+				<div class="polaroid-content only-img">
+					[get_image id="470"]
 				</div>
 				<div class="pdd6">
 					<p>{7}</p>
@@ -44,8 +44,8 @@
 				</div>
 			</li>
 			<li class="span4 pdd3">
-				<div class="polaroid-content">
-					[get_image id="191"]
+				<div class="polaroid-content only-img">
+					[get_image id="468"]
 				</div>
 				<div class="pdd6">
 					<p>{11}</p>
