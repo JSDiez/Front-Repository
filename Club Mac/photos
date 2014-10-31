@@ -1,5 +1,5 @@
 <section id="header-content" role="banner">
-	[get_image id="575"]
+	[get_image id="566"]
 	<div class="affix-top">
 		[mi_exec_widget id=mirai_engine]
 	</div>
@@ -8,10 +8,5 @@
 <section id="intro">
 	<div class="container">
 		<h1>{1}</h1>
-		<p>{2}</p>
-		<p>{3}</p>
-		<p>{4}</p>
-		<p>{5}</p>
-		<p>{6}</p>
 	</div>
 </section>
