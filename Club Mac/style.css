@@ -200,9 +200,19 @@ img {
     padding: 6px 20px;
     position: relative;
     z-index: 10;
+   -webkit-transition: all 0.3s linear;
+   -moz-transition: all 0.3s linear;
+   -ms-transition: all 0.3s linear;
+   -o-transition: all 0.3s linear;
+   transition: all 0.3s linear;
 }
 .offers-mashup .more-info-link {
     background: #5BB8E3!important;
+}
+#main .container a:not(.tracking-link):hover, .offers-mashup .more-info-link:hover, .transfer a:hover {
+    text-decoration: none!important;
+    background: #E86B17!important;
+    color: #FFF!important;
 }
 #footer .bg-light-brown {
     padding: 10px 0;
@@ -268,6 +278,9 @@ h3.sustainability i {
     background: url('/files/polaroid-shadow-right.png') no-repeat;
     left: auto;
     right: 0;   
+}
+.polaroid-content img {
+    width: 100%;
 }
 
 
@@ -711,11 +724,22 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
     color: #474747;
     font-size: 18px;
+   -webkit-transition: all 0.3s linear;
+   -moz-transition: all 0.3s linear;
+   -ms-transition: all 0.3s linear;
+   -o-transition: all 0.3s linear;
+   transition: all 0.3s linear;
     text-transform: uppercase;
     padding: 10px 16px;
 }
 .engine_mashup > div form .button-group input[type="submit"]:hover, .mapa .formRuta input.calculaRuta:hover, #mirai_be7 input:hover, #respond .form-submit #submit:hover, .wpcf7 .wpcf7-form input.wpcf7-submit:hover, .offers-listing-wrapper .offer .offer-button:hover, .offers-detail-wrapper .offer-calendar-wrapper .offer-button:hover {
-    
+    text-decoration: none;
+    background: #E86B17;
+    color: #FFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+    -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 .help-inline._nights {display: none!important}
@@ -1059,7 +1083,12 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
 }
 
 /* ipad portrait - landscape */
-@media (min-device-width: 768px) and (max-device-width: 979px){}
+@media (min-device-width: 768px) and (max-device-width: 979px){
+    #engine-tracking-link-wrapper {display: none}
+    #children-paradise h2 {
+        margin-top: 50px;
+    }
+}
 
 /* customize ipad portrait */
 @media (min-device-width: 768px) and (max-device-width: 979px) and (orientation : portrait) {
