@@ -1,5 +1,5 @@
 <section id="header-content" role="banner">
-	[get_image id="502"]
+	[get_image id="1007"]
 	<div class="affix-top">
 		[mi_exec_widget id=mirai_engine]
 	</div>
@@ -31,7 +31,6 @@
 					<p>{4}</p>
 					<p>{5}</p>
 					<p>{6}</p>
-					<p>{15}</p>
 				</div>
 			</li>
 			<li class="span4 pdd2">
@@ -42,7 +41,6 @@
 					<p>{7}</p>
 					<p>{8}</p>
 					<p>{9}</p>
-					<p>{10}</p>
 				</div>
 			</li>
 			<li class="span4 pdd3">
@@ -69,5 +67,7 @@
 			<li>[get_image id="450" alt="{19}" title="{19}"]</li>
 			<li>[get_image id="460" alt="{20}" title="{20}"]</li>
 		</ul>
+		<br>
+		<p><em>{15}</em></p>
 	</div>
 </section>
