@@ -11,12 +11,12 @@ Author: Mirai Espana
 /*---------------------------------------------------------------------------*/
 
 h1 {}
-h2, #main .offers-mashup h3, #intro h1 {
+h2, #main .offers-mashup h3, #intro h1, .cat-cookies-policy h1 {
     color: #6B6969;
     font-size: 40px;
     line-height: 1.8;
 }
-#main h3 {
+#main h3, .cat-cookies-policy h2, .map-list li {
     color: #E86B17;
     font-size: 18px;
 }
@@ -24,6 +24,9 @@ h4 {}
 
 h1, h2, h3, h4 {
     font-family: 'Pacifico', cursive;
+}
+.cat-cookies-policy h2 {
+    font-family: 'Muli', sans-serif;
 }
 h1 span, h2 span, h3 span, h4 span {
     color: #008FCF;
@@ -34,7 +37,7 @@ a:hover {}
 
 body {
     color: #6B6969;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Muli', sans-serif;
     font-size: 16px;
 }
 
@@ -111,16 +114,20 @@ img {
     padding: 30px 20px;
 }
 .bg-blue-gradient {    
+    background-color: #578FCF;
     background-image: linear-gradient(180deg,#578FCF 0%, #2966A3 100%);
     background-image: -moz-linear-gradient(-90deg,rgba(87, 143, 207, 1) 0%, rgba(41, 102, 163, 1) 100%);
     background-image: -o-linear-gradient(-90deg,rgba(87, 143, 207, 1) 0%, rgba(41, 102, 163, 1) 100%);
     background-image: -ms-linear-gradient(-90deg,rgba(87, 143, 207, 1) 0%, rgba(41, 102, 163, 1) 100%);
     background-image: -webkit-linear-gradient(-90deg,#578FCF 0%, #2966A3 100%);
 }
+.bg-light-grey {
+    background: #e6e6e6;
+}
 #main .container {
     padding: 70px 0;
 }
-#main #intro .container {
+#main #intro .container, #main .bg-light-brown .container {
     padding: 40px 0;
 }
 .app-downloads {
@@ -136,6 +143,7 @@ img {
     line-height: 14px;
     text-align: right;
 }
+
 .app-downloads p, .app-downloads a {
     margin-right: 8px!important;
 }
@@ -183,7 +191,7 @@ img {
     margin-bottom: -70px;
 }
 
-#main .container a:not(.tracking-link), .offers-mashup .more-info-link, .transfer a {
+/*body:not(.cat-offers) #main .container a:not(.tracking-link),*/ .offers-mashup .more-info-link, .transfer a, .button a, #mc_signup_submit {
     background-color: #5BB8E3!important;
     border: 0;
     border-radius: 4px;
@@ -209,7 +217,7 @@ img {
 .offers-mashup .more-info-link {
     background: #5BB8E3!important;
 }
-#main .container a:not(.tracking-link):hover, .offers-mashup .more-info-link:hover, .transfer a:hover {
+/*body:not(.cat-offers) #main .container a:not(.tracking-link):hover,*/ .offers-mashup .more-info-link:hover, .transfer a:hover, .button a:hover, #mc_signup_submit:hover {
     text-decoration: none!important;
     background: #E86B17!important;
     color: #FFF!important;
@@ -217,6 +225,9 @@ img {
 #footer .bg-light-brown {
     padding: 10px 0;
     margin-bottom: 10px;
+}
+#footer .bg-light-brown .container {
+    position: relative;
 }
 #footer .bg-light-brown h3 {
     color: #7d7b76;
@@ -310,7 +321,9 @@ h3.sustainability i {
 .transfer p {
     font-size:13px
 }
-
+.transfer a {
+    padding: 6px 10px;
+}
 .align-left {
     text-align: left;
 }
@@ -348,6 +361,9 @@ h3.sustainability i {
 #content-social-links .twitter {
     background-position: -64px -32px;
 }
+#content-social-links .googleplus {
+    background-position: -192px -32px;
+}
 .affix-top {
    -webkit-transition: all 0.3s linear;
    -moz-transition: all 0.3s linear;
@@ -366,18 +382,33 @@ h3.sustainability i {
    transition: all 0.3s linear;
     z-index: 100;
 }
+.ico-menu-movil, .ico-close-movil {
+    display: none;
+}
 
 
 /* HOME */
 #intro .span8 {
     padding: 0 4%;
 }
+html[lang="es"] .home .bg-colour-lines {
+    display:none
+}
 
 /* FACILITIES */
 .bg-spiral {
     padding:20px 0;
 }
-
+.map-list span {
+    background: #666;
+    border-radius: 50%;
+    display: inline-block;
+    color: #FFF;
+    font-size: 14px;
+    text-shadow: 0 1px 1px #333;
+    margin-bottom: 5px;
+    padding: 6px 12px;
+}
 
 
 /* EMTERTAINMENT */
@@ -436,10 +467,13 @@ body #main #intro dd a, #main #location p a, #main #information p a, #main #chec
     margin: 0!important;
     font-size: 16px!important;
 }
-#intro dd {
+body #main #intro dd a:hover, #main #location p a:hover, #main #information p a:hover, #main #check-in p a:hover, #main #map_canvas0 a:hover {
+    color: #E86B17!important;
+}
+.cat-faq  dd {
     margin-bottom: 20px;
 }
-#intro dt {
+.cat-faq dt {
     color: #E86B17;
     font-size: 18px;
 }
@@ -463,6 +497,11 @@ body #main #intro dd a, #main #location p a, #main #information p a, #main #chec
 /* FACILITIES */
 .table-extra-info ul {
     background: #f0f0f0;
+}
+.table-extra-info h3 {  
+    color: #6B6969;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
 }
 .table-extra-info li {
     border: 1px solid #8F8F8F;
@@ -493,20 +532,76 @@ body #main #intro dd a, #main #location p a, #main #information p a, #main #chec
 div.hssurveys_full .comments p.commentsPerson span.date {
     color: #000 !important;
 }
-
 div.hssurveys_full .noLink, div.hssurveys_full .noLink a {
     color: #000 !important;
 }
-
 div.hssurveys_full {
     padding: 2%; 
     width: 96%;
 }
-
 .reviewsOn .questions li p.answer {
     line-height: 22px !important;
     padding: 0 6px 0 10px !important;
 }
+
+.cat-reviews iframe {
+    border:0;
+    height: 400px;
+    width:100%;
+}
+
+
+/* OFFERS PAGE */
+.offers-listing-wrapper.container, .offers-detail-wrapper.container {
+    margin: 0 auto;
+}
+.offers-detail-wrapper {
+    text-align: left!important;
+}
+
+
+/* COOKIES POLICY */
+.cat-cookies-policy #main li {
+    display:inline-block;
+    margin:10px;
+}
+
+
+/* GALLERY */
+.ngg-galleryoverview {
+    position: relative;
+    margin: 0;
+}
+.ngg-gallery-thumbnail-box {
+    display:none;
+}
+.ngg-gallery-thumbnail-box.first-child {
+    display:block;
+}
+.ngg-gallery-thumbnail {
+    float: none;
+    margin:0;
+}
+.ngg-galleryoverview .ngg-gallery-thumbnail img {
+    border: 0;
+    margin: 0;
+    padding:0;
+    width: 580px;
+}
+.n-photos-content {
+    background: #000;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.n-photos {
+    background: url('http://www.hotelvalencialasarenas.com/files/photo-icon.png') no-repeat center right;
+    color: #FFF;
+    padding-right: 28px;
+}
+
 
 /* BLOG */
 .blog-wrapper {
@@ -597,6 +692,12 @@ div.hssurveys_full {
 ul#menu_web {
     text-align: right;
 }
+ul#menu_web .visible-phone {
+    display: inline-block!important;
+}
+ul#menu_web .booking-button {
+    display: none!important;
+}
 ul#menu_web > li {
     border-left: 1px solid #9497A6;
     display: inline-block;
@@ -665,8 +766,9 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
     display: inline-block;
     padding-right: 10px;
 }
-#menu_footer li {
+#menu_legal li {
     padding-left: 10px;
+    padding-right: 0;
 }
 #menu_footer a {
     line-height: 24px;
@@ -759,6 +861,9 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
     font-size: 14px;
     margin-top: 6px!important;
 }
+#engine-tracking-link-wrapper {
+    display: none;
+}
 
 
 /* square two-columns (column-width)*/
@@ -778,7 +883,8 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
 #ui-datepicker-div {
     font-size: 14px !important;
 }
-.ui-datepicker .ui-datepicker-header, .ui-datepicker .ui-datepicker-buttonpane button, .ui-datepicker td:hover a {
+.ui-datepicker .ui-datepicker-header, .ui-datepicker .ui-datepicker-buttonpane button, .ui-datepicker td:hover a,
+.offers-detail-wrapper .offer-calendar-wrapper .offer-date .ui-datepicker-inline .ui-datepicker-header {
     background: #FFCD03;
     color: #FFF;
 }
@@ -865,6 +971,42 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
     font-size: 14px;
 }
 
+
+/* NEWSLETTER */
+#mc_display_rewards {
+    display: none;
+}
+#mc_signup_form .mc_var_label {
+    position: absolute;
+    left: 6px;
+    top: 46px;
+}
+#mc_signup_form .mc_input {
+    height: auto;
+    margin-bottom: 0;
+    padding: 5px!important;
+}
+.mc_merge_var, .mc_signup_submit, #mc_signup_submit, #mc_signup_form .mc_input {
+    display: inline-block;
+}
+ #mc_signup_submit {
+    margin-top: 0!important;
+    width: 100%!important;
+}
+.mc_merge_var {
+    margin-bottom: 0!important;
+    width: 40%;
+}
+.mc_form_inside #mc_message {
+    font-size: 11px;
+    margin-top: -6px;
+    margin-bottom: 4px;
+    line-height: 13px;
+    width: 95%;
+}
+
+
+
 /*---------------------------------------------------------------------------*/
 /*------------------------------ CONTENT ELEMENTS ---------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -932,6 +1074,15 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
 #main .on-page-slideshow .custom {
     height: 194px!important;
     width: 290px!important;
+}
+
+#main .span5 .on-page-slideshow .custom {
+    height: 239px!important;
+    width: 357px!important;
+}
+#main .span4 .on-page-slideshow .custom {
+    height: 185px!important;
+    width: 277px!important;
 }
 #main .tab-pane .on-page-slideshow .custom {
     height: 176px!important;
@@ -1053,7 +1204,7 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
     #main .container {
         padding: 80px 0;
     }
-    #main #intro .container {
+    #main #intro .container, #main .bg-light-brown .container {
         padding: 60px 0;
     }
     .over-bottom-content {
@@ -1070,6 +1221,14 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
         height: 247px!important;
         width: 370px!important;
     }
+    #main .span5 .on-page-slideshow .custom {
+        height: 306px!important;
+        width: 457px!important;
+    }
+    #main .span4 .on-page-slideshow .custom {
+        height: 239px!important;
+        width: 357px!important;
+    }
     #main .tab-pane .on-page-slideshow .custom {
         height: 230px!important;
         width: 343px!important;
@@ -1079,6 +1238,9 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
     }
     .table-extra-info .small-text {
         font-size: 16px;
+    }
+    #engine-tracking-link-wrapper {
+        display: inline-block;
     }
 }
 
@@ -1098,6 +1260,42 @@ ul#menu_web > li ul.sub-menu .highlight.first a {
     .bookingstep1 #header .content {
         width: 100%;
     }
+    .promo-code-control-group, em.slogan, .app-downloads-footer, #main .offers-mashup h3:before {
+        display: none!important;
+    }
+    #logo {
+        margin-bottom: 0;
+    }
+    ul#menu_web>li a {
+        font-size: 16px;
+    }
+    .engine_mashup > div {
+        width: 100%;        
+    }
+    #video iframe, #activities iframe {
+        height: 450px!important;
+        width: 700px!important;
+    }
+    .hotelschema, #menu_legal {
+        text-align: center!important;
+        width:100%!important;
+    }
+    #main .slide-room {
+        width: 43%!important;
+    }
+    #main .text-intro-room {
+        width: 45%!important;
+    }
+    .bookingstep1 header .content .container {
+        width: 100%;
+    }
+    .bookingstep1 .promo-code-control-group {
+        display:inline-block;
+    }
+    h2, #main .offers-mashup h3, #intro h1 {
+        font-size: 36px;
+    }
+    
 }
 
 /* customize ipad landscape */

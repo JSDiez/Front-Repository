@@ -8,5 +8,45 @@
 <section id="intro">
 	<div class="container">
 		<h1>{1}</h1>
+		<div class="row">
+			<ul>
+				<li class="span6 offset3">
+					<div class="polaroid-content photo_gallery">
+						[nggallery id="7"]
+						<h3>{2}</h3>
+						<div class="n-photos-content">
+							<i class="n-photos">1</i>
+						</div>
+					</div>
+				</li>
+				<li class="span6 pdd2">
+					<div class="polaroid-content photo_gallery">
+						[nggallery id="8"]
+						<h3>{3}</h3>
+						<div class="n-photos-content">
+							<i class="n-photos">1</i>
+						</div>
+					</div>
+				</li>
+				<li class="span6 pdd2">
+					<div class="polaroid-content photo_gallery">
+						[nggallery id="9"]
+						<h3>{4}</h3>
+						<div class="n-photos-content">
+							<i class="n-photos">1</i>
+						</div>
+					</div>
+				</li>
+				<li class="span6 offset3">
+					<div class="polaroid-content photo_gallery">
+						[nggallery id="10"]
+						<h3>{5}</h3>
+						<div class="n-photos-content">
+							<i class="n-photos">1</i>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
 </section>
