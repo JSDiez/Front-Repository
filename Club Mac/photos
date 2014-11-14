@@ -10,7 +10,7 @@
 		<h1>{1}</h1>
 		<div class="row">
 			<ul>
-				<li class="span6 offset3">
+				<li class="span6 pdd2">
 					<div class="polaroid-content photo_gallery">
 						[nggallery id="7"]
 						<h3>{2}</h3>
@@ -37,7 +37,7 @@
 						</div>
 					</div>
 				</li>
-				<li class="span6 offset3">
+				<li class="span6 pdd2">
 					<div class="polaroid-content photo_gallery">
 						[nggallery id="10"]
 						<h3>{5}</h3>
